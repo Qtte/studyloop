@@ -1,0 +1,4 @@
+{"id":"explain-context-001","question":"为什么上下文工程能提升 Agent 回复质量？","current_topic":"Context Engineering","must_mention_any":["上下文工程","Context Engineering"],"min_answer_length":250,"min_evidence_count":2,"forbid_points":["与问题无关"]}
+{"id":"explain-redis-001","question":"请解释 Redis 为什么适合做缓存。","current_topic":"Redis","must_mention_any":["Redis","缓存"],"min_answer_length":250,"min_evidence_count":1,"forbid_points":["与问题无关"]}
+{"id":"explain-db-001","profile":"extended","question":"为什么 Databases index can improve query speed, but it also increases write cost and storage cost?","current_topic":"Databases","must_mention_any":["Databases","索引","查询"],"min_answer_length":100,"min_evidence_count":1,"forbid_points":["与问题无关"]}
+{"id":"explain-econ-001","profile":"extended","question":"请解释信贷扩张通常指什么，以及它为什么可能推动投资和消费并带来资产价格泡沫与杠杆风险？","current_topic":"信贷扩张","must_mention_any":["信贷扩张","贷款","信用"],"min_answer_length":80,"min_evidence_count":0,"forbid_points":["与问题无关"]}

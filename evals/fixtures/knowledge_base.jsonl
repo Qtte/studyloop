@@ -1,0 +1,7 @@
+{"id":"kb-context-001","source":"eval-seed","title":"上下文工程基础","topic":"Context Engineering","content":"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。"}
+{"id":"kb-context-002","source":"eval-seed","title":"上下文工程的四要素","topic":"Context Engineering","content":"构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。"}
+{"id":"kb-redis-001","source":"eval-seed","title":"Redis 缓存基础","topic":"Redis","content":"Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。"}
+{"id":"kb-redis-002","source":"eval-seed","title":"Redis 场景与数据结构","topic":"Redis","content":"Redis 的 string 常用于缓存和计数器，hash 适合存储对象字段，list 可用于消息队列，set 适合去重，zset 常用于排行榜。"}
+{"id":"kb-db-001","source":"eval-seed","title":"数据库索引与查询","topic":"Databases","content":"数据库索引用于提升查询速度，但也会增加写入成本和存储成本。设计索引时需要结合查询条件、排序字段和数据分布来判断。Databases index can improve query speed, but it also increases write cost and storage cost."}
+{"id":"kb-db-002","source":"eval-seed","title":"MySQL 联合索引与最左前缀","topic":"Databases","content":"MySQL 联合索引遵循最左前缀原则，查询条件越贴近索引左侧字段，越容易命中索引；合理设计联合索引可以减少回表和排序开销。"}
+{"id":"kb-econ-001","source":"eval-seed","title":"信贷扩张","topic":"信贷扩张","content":"信贷扩张通常指金融体系中贷款投放增加，货币和信用供给扩张，可能推动投资和消费，但也可能带来资产价格泡沫与杠杆风险。"}

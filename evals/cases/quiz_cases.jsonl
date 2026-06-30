@@ -1,0 +1,4 @@
+{"id":"quiz-context-001","current_topic":"Context Engineering","prompt":"围绕上下文工程生成一组练习题。","question_count":3,"question_types":["multiple_choice","open_ended"],"difficulty":"medium","expected_topic":"Context Engineering"}
+{"id":"quiz-redis-001","current_topic":"Redis","prompt":"围绕 Redis 缓存基础生成一组练习题。","question_count":3,"question_types":["multiple_choice","open_ended"],"difficulty":"medium","expected_topic":"Redis"}
+{"id":"quiz-db-001","profile":"extended","current_topic":"Databases","prompt":"围绕数据库索引与联合索引生成一组练习题。","question_count":3,"question_types":["multiple_choice","open_ended"],"difficulty":"medium","expected_topic":"Databases"}
+{"id":"quiz-econ-001","profile":"extended","current_topic":"信贷扩张","prompt":"围绕信贷扩张生成一组练习题。","question_count":2,"question_types":["multiple_choice","open_ended"],"difficulty":"medium","expected_topic":"信贷扩张"}

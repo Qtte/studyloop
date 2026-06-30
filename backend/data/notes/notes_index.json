@@ -1,0 +1,170 @@
+{
+  "47318081b6eb": {
+    "created_at": "2026-06-26T01:51:10.777093+00:00",
+    "id": "47318081b6eb",
+    "metadata": {
+      "mastery_after": 0.44,
+      "mastery_before": 0.5,
+      "score": 45,
+      "topic": "Context Engineering"
+    },
+    "note_type": "mistake_record",
+    "path": "47318081b6eb.md",
+    "preview": "Question: ?????????\n\nStudent answer: ??????????????\n\nFeedback: 当前得分 45。主要问题类型是 application_weak，建议回看定义、证据和应用场景。\n\nSuggested note: 记录本次易错点，并补上缺失概念。",
+    "tags": [
+      "Context Engineering",
+      "application_weak"
+    ],
+    "title": "Mistake record: Context Engineering",
+    "updated_at": "2026-06-26T01:51:10.777093+00:00"
+  },
+  "4eb478a7aca9": {
+    "created_at": "2026-06-26T03:22:16.855553+00:00",
+    "id": "4eb478a7aca9",
+    "metadata": {
+      "mastery_after": 0.44,
+      "mastery_before": 0.5,
+      "score": 55,
+      "topic": "Context Engineering"
+    },
+    "note_type": "mistake_record",
+    "path": "4eb478a7aca9.md",
+    "preview": "Question: 为什么学习型 agent 不应该只依赖长提示词？\n\nStudent answer: 因为只写很长的提示词不够稳定，应该把学习目标、证据和历史错误一起组织起来，这样模型更容易输出一致结果。\n\nFeedback: 你的回答比上次有进步，捕捉到了「不稳定」和「组织起来」这些关键点。但仍需加强：\n\n1. *",
+    "tags": [
+      "Context Engineering",
+      "application_weak"
+    ],
+    "title": "Mistake record: Context Engineering",
+    "updated_at": "2026-06-26T03:22:16.855553+00:00"
+  },
+  "a9576be25fa3": {
+    "created_at": "2026-06-26T03:10:51.698547+00:00",
+    "id": "a9576be25fa3",
+    "metadata": {
+      "mastery_after": 0.44,
+      "mastery_before": 0.5,
+      "score": 40,
+      "topic": "Context Engineering"
+    },
+    "note_type": "mistake_record",
+    "path": "a9576be25fa3.md",
+    "preview": "Question: 为什么学习型 agent 不应该只依赖长提示词？\n\nStudent answer: 因为只写很长的提示词不够稳定，应该把学习目标、证据和历史错误一起组织起来，这样模型更容易输出一致结果。\n\nFeedback: 当前得分 40。主要问题类型是 application_weak，建议回看定义、证据和应用",
+    "tags": [
+      "Context Engineering",
+      "application_weak"
+    ],
+    "title": "Mistake record: Context Engineering",
+    "updated_at": "2026-06-26T03:10:51.698547+00:00"
+  },
+  "a9c73c5005d0": {
+    "created_at": "2026-06-27T03:47:45.319857+00:00",
+    "id": "a9c73c5005d0",
+    "metadata": {
+      "category_path": [
+        "Technology",
+        "Databases",
+        "Caching Solutions",
+        "Redis"
+      ],
+      "learning_goal": "Understand the core key-value model of Redis, the supported data types, and the reasons it is effective as a caching solution to improve database performance and scalability.",
+      "source": "01-Redis 基础模型、数据类型与为什么用它做缓存.md",
+      "summary": "Redis is an in-memory key-value store where keys map to values of various data types. It excels as a caching layer for MySQL due to its high performance, support for rich data structures, persistence, and ability to handle high concurrency, making it preferable over simpler solutions like Memcached for most caching needs.",
+      "title": "Redis 基础模型、数据类型与为什么用它做缓存",
+      "topic": "Redis caching fundamentals: model, data types, and advantages for MySQL caching"
+    },
+    "note_type": "knowledge_item",
+    "path": "a9c73c5005d0.md",
+    "preview": "## 自动摘要\nRedis is an in-memory key-value store where keys map to values of various data types. It excels as a caching layer for MySQL due to its high performance",
+    "tags": [
+      "Caching Solutions",
+      "Databases",
+      "Redis",
+      "Redis caching fundamentals: model, data types, and advantages for MySQL caching",
+      "Technology",
+      "cache",
+      "data-types",
+      "high-concurrency",
+      "key-value-store",
+      "memcached",
+      "mysql-caching",
+      "performance",
+      "redis"
+    ],
+    "title": "Redis 基础模型、数据类型与为什么用它做缓存",
+    "updated_at": "2026-06-27T03:47:45.319857+00:00"
+  },
+  "b1d1665f3d82": {
+    "created_at": "2026-06-26T08:38:27.368596+00:00",
+    "id": "b1d1665f3d82",
+    "metadata": {
+      "category_path": [
+        "经济学",
+        "金融市场",
+        "经济泡沫"
+      ],
+      "summary": "经济泡沫是资产价格因投机和信贷扩张而大幅上涨，远超内在价值，最终突然破裂的现象。关键特征包括价格飙升、投机驱动、脱离基本面、破裂突然等，历史案例有荷兰郁金香泡沫和2008年美国房地产泡沫。",
+      "tags": [
+        "经济泡沫",
+        "资产价格",
+        "投机",
+        "信贷扩张",
+        "金融危机",
+        "市场风险"
+      ],
+      "title": "经济泡沫"
+    },
+    "note_type": "conversation_summary",
+    "path": "b1d1665f3d82.md",
+    "preview": "## 对话总结\n经济泡沫是资产价格因投机和信贷扩张而大幅上涨，远超内在价值，最终突然破裂的现象。关键特征包括价格飙升、投机驱动、脱离基本面、破裂突然等，历史案例有荷兰郁金香泡沫和2008年美国房地产泡沫。\n\n## 用户问题\n什么是经济泡沫\n\n## Agent 回答\n经济泡沫是金融领域的一个重要现象，理解它有助于我们认识",
+    "tags": [
+      "信贷扩张",
+      "市场风险",
+      "投机",
+      "经济学",
+      "经济泡沫",
+      "资产价格",
+      "金融危机",
+      "金融市场"
+    ],
+    "title": "经济泡沫",
+    "updated_at": "2026-06-26T08:38:27.368596+00:00"
+  },
+  "df6dba248a60": {
+    "created_at": "2026-06-26T07:13:04.081459+00:00",
+    "id": "df6dba248a60",
+    "metadata": {
+      "mastery_after": 0.51,
+      "mastery_before": 0.5,
+      "score": 60,
+      "topic": "Context Engineering"
+    },
+    "note_type": "mistake_record",
+    "path": "df6dba248a60.md",
+    "preview": "Question: 请解释 Context Engineering 的核心概念，并给出一个应用场景。\n\nStudent answer: 将用户的对话记录保存到context中，便于以后大模型可以根据之前的历史记录生成回答。应用场景：聊天机器人可以记住你的聊天习性\n\nFeedback: Fallback grading ",
+    "tags": [
+      "Context Engineering",
+      "shallow_answer"
+    ],
+    "title": "Mistake record: Context Engineering",
+    "updated_at": "2026-06-26T07:13:04.081459+00:00"
+  },
+  "e418567ca901": {
+    "created_at": "2026-06-26T08:27:23.121631+00:00",
+    "id": "e418567ca901",
+    "metadata": {
+      "mastery_after": 0.51,
+      "mastery_before": 0.5,
+      "score": 60,
+      "topic": "Context Engineering"
+    },
+    "note_type": "mistake_record",
+    "path": "e418567ca901.md",
+    "preview": "Question: 请解释 Context Engineering 的核心概念，并给出一个应用场景。\n\nStudent answer: 上下文工程主要是将用户的发送的问题和大模型的回答保存下来，作为大模型的记忆。大模型有了记忆之后，在后续的回答中大模型就能够记得之前用户的聊天信息，比如年龄、爱好之类的\n\nFeedbac",
+    "tags": [
+      "Context Engineering",
+      "shallow_answer"
+    ],
+    "title": "Mistake record: Context Engineering",
+    "updated_at": "2026-06-26T08:27:23.121631+00:00"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "generated_at": "2026-06-28T11:42:37",
+  "suite": "explain",
+  "runtime_root": "D:\\Code\\Python\\HelloAgents-main\\evals\\runtime",
+  "report_dir": "D:\\Code\\Python\\HelloAgents-main\\evals\\reports",
+  "use_mock_llm": false,
+  "use_qdrant": true,
+  "passed": 0,
+  "failed": 2,
+  "total": 2,
+  "overall_pass_rate": 0.0,
+  "suite_metrics": {
+    "explain": {
+      "total": 2,
+      "passed": 0,
+      "failed": 2,
+      "pass_rate": 0.0
+    }
+  },
+  "results": [
+    {
+      "suite": "explain",
+      "case_id": "explain-context-001",
+      "passed": false,
+      "details": "missing=['定义', '关键机制', '应用场景'], forbidden=[], answer_len=665",
+      "metrics": {
+        "answer_length": 665,
+        "missing_count": 3,
+        "forbidden_count": 0
+      },
+      "payload_preview": {
+        "answer": "上下文工程通过动态组织信息来提升Agent回复质量，核心在于它提供了**可调试、可更新、且更适合工作流**的三大优势。\n\n根据证据，上下文工程并非简单地堆砌冗长提示词，而是围绕**学习目标、外部证据、历史错误反馈和当前任务**这四个核心要素来构建上下文。这种结构化的方式带来了质量提升：\n\n1.  **可调试性**：当回复出现问题时，可以清晰地回溯是哪个信息模",
+        "context": "[Role & Policies]\n- You are StudyLoop, a patient study agent. Use retrieved evidence and learner history carefully. Be pedagogically clear, concise, and grounded in the supplied study context.\n\n[Learning Goal]\n- 理解上下文工程通过动态组织信息来提升 Agent 回复质量的机制\n\n[Current Task]\n- 解释上下文工程如何通过可调试、可更新和适合 Agent 工作流来提升回复质量\n\n[Current Topic]\n- Context Engineering\n\n[Learner State]\n- {\n  \"mastery\": 0.5\n}\n\n[Evidence]\n- {\n  \"content\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\",\n  \"doc_id\": \"6f7a0011-aaef-4d5e-91bb-3c4bbd1d82aa\",\n  \"metadata\": {\n    \"category_path\": [\n      \"学习技术\",\n      \"上下文工程\",\n      \"基础\"\n    ],\n    \"summary\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。优势是可调试、可更新，并更适合Agent工作流。\",\n    \"tags\": [\n      \"上下文工程\",\n      \"提示词\",\n      \"学习目标\",\n      \"证据\",\n      \"历史错误\",\n      \"当前任务\",\n      \"动态组织\",\n      \"可调试\"\n    ],\n    \"title\": \"上下文工程基础\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"score\": 0.83355623,\n  \"source\": \"eval-seed\"\n}\n- {\n  \"content\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\",\n  \"doc_id\": \"557b32af-4969-430e-ac56-b6fbece6ca0f\",\n  \"metadata\": {\n    \"category_path\": [\n      \"学习技术\",\n      \"上下文工程\"\n    ],\n    \"summary\": \"上下文工程涉及围绕学习目标、证据、历史错误和当前任务动态组织信息，而不是简单堆砌长提示词。其优势在于可调试、可更新，并更适合Agent工作流。\",\n    \"tags\": [\n      \"上下文工程\",\n      \"学习目标\",\n      \"证据\",\n      \"历史错误\",\n      \"当前任务\",\n      \"Agent工作流\"\n    ],\n    \"title\": \"上下文工程基础\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"score\": 0.83355623,\n  \"source\": \"eval-seed\"\n}\n- {\n  \"content\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\",\n  \"doc_id\": \"d04eba08-1938-40fb-befc-fde9384cb934\",\n  \"metadata\": {\n    \"category_path\": [\n      \"学习方法\",\n      \"上下文工程\"\n    ],\n    \"summary\": \"上下文工程不是简单堆砌长提示词，而是通过动态组织信息来围绕学习目标、证据、历史错误和当前任务，从而实现可调试、可更新，并更适合 Agent 工作流。\",\n    \"tags\": [\n      \"上下文工程\",\n      \"提示词\",\n      \"动态组织\",\n      \"学习目标\",\n      \"证据\",\n      \"历史错误\",\n      \"当前任务\",\n      \"Agent 工作流\"\n    ],\n    \"title\": \"上下文工程基础\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"score\": 0.83355623,\n  \"source\": \"eval-seed\"\n}\n- {\n  \"content\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\",\n  \"doc_id\": \"86a5c34b-816f-40d8-bf81-751b49fd1537\",\n  \"metadata\": {\n    \"category_path\": [\n      \"学习系统\",\n      \"上下文工程\"\n    ],\n    \"summary\": \"上下文工程强调动态组织信息以支持学习目标、利用证据、历史错误和当前任务，具有可调试、可更新的优势，并更适合Agent工作流。\",\n    \"tags\": [\n      \"上下文工程\",\n      \"动态组织\",\n      \"学习目标\",\n      \"证据\",\n      \"历史错误\",\n      \"当前任务\",\n      \"Agent工作流\",\n      \"可调试\"\n    ],\n    \"title\": \"上下文工程基础\",\n    \"topic\": \"上下文工程\"\n  },\n  \"score\": 0.83355623,\n  \"source\": \"eval-seed\"\n}\n- {\n  \"content\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\",\n  \"doc_id\": \"2c158995-1d95-4ba6-b43a-183ceaccc4ce\",\n  \"metadata\": {\n    \"category_path\": [\n      \"学习技术\",\n      \"人工智能\",\n      \"上下文工程\"\n    ],\n    \"summary\": \"上下文工程不是简单堆砌长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息，具有可调试、可更新且更适合Agent工作流的优势。\",\n    \"tags\": [\n      \"上下文工程\",\n      \"学习目标\",\n      \"证据\",\n      \"历史错误\",\n      \"当前任务\",\n      \"动态组织信息\",\n      \"可调试性\",\n      \"可更新性\"\n    ],\n    \"title\": \"上下文工程基础\",\n    \"topic\": \"上下文工程\"\n  },\n  \"score\": 0.83355623,\n  \"source\": \"eval-seed\"\n}\n\n[Mistake History]\n- 暂无历史错题记录。\n\n[Learning Notes]\n- {\n  \"content\": \"## 自动摘要\\n构建上下文时，重点组织学习目标、外部证据、历史错误反馈和当前任务这四类信息，可以使 Agent 根据结构化信息裁剪上下文，通常比静态长提示词更稳定。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 上下文工程\\n- 主题：Context Engineering\\n- 标签：上下文工程, 学习目标, 外部证据, 历史错误反馈, 当前任务, Agent, 结构化信息, 提示词优化\",\n  \"created_at\": \"2026-06-28T03:38:13.220221+00:00\",\n  \"id\": \"c3ae3f1e3664\",\n  \"metadata\": {\n    \"category_path\": [\n      \"人工智能\",\n      \"上下文工程\"\n    ],\n    \"learning_goal\": \"理解上下文工程的四要素，并学习如何应用它们来优化 Agent 的上下文处理，提升响应稳定性。\",\n    \"source\": \"eval-seed\",\n    \"summary\": \"构建上下文时，重点组织学习目标、外部证据、历史错误反馈和当前任务这四类信息，可以使 Agent 根据结构化信息裁剪上下文，通常比静态长提示词更稳定。\",\n    \"title\": \"上下文工程的四要素\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"note_type\": \"knowledge_item\",\n  \"path\": null,\n  \"preview\": \"## 自动摘要\\n构建上下文时，重点组织学习目标、外部证据、历史错误反馈和当前任务这四类信息，可以使 Agent 根据结构化信息裁剪上下文，通常比静态长提示词更稳定。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 上下文工程\\n- 主题：Context Engineering\\n- 标签：上下文工程, 学习目标, 外部\",\n  \"tags\": [\n    \"Agent\",\n    \"Context Engineering\",\n    \"上下文工程\",\n    \"人工智能\",\n    \"历史错误反馈\",\n    \"外部证据\",\n    \"学习目标\",\n    \"当前任务\",\n    \"提示词优化\",\n    \"结构化信息\"\n  ],\n  \"title\": \"上下文工程的四要素\",\n  \"updated_at\": \"2026-06-28T03:38:13.220221+00:00\"\n}\n\n[Conversation Context]\n- 暂无历史对话上下文。\n\n[Output Spec]\n- Answer in prose with a short explanation, cited evidence, and a next step.",
+        "evidence": [
+          {
+            "doc_id": "557b32af-4969-430e-ac56-b6fbece6ca0f",
+            "content": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Context Engineering",
+              "title": "上下文工程基础",
+              "category_path": [
+                "学习技术",
+                "上下文工程"
+              ],
+              "tags": [
+                "上下文工程",
+                "学习目标",
+                "证据",
+                "历史错误",
+                "当前任务",
+                "Agent工作流"
+              ],
+              "summary": "上下文工程涉及围绕学习目标、证据、历史错误和当前任务动态组织信息，而不是简单堆砌长提示词。其优势在于可调试、可更新，并更适合Agent工作流。"
+            },
+            "score": 0.83355623
+          },
+          {
+            "doc_id": "2c158995-1d95-4ba6-b43a-183ceaccc4ce",
+            "content": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "上下文工程",
+              "title": "上下文工程基础",
+              "category_path": [
+                "学习技术",
+                "人工智能",
+                "上下文工程"
+              ],
+              "tags": [
+                "上下文工程",
+                "学习目标",
+                "证据",
+                "历史错误",
+                "当前任务",
+                "动态组织信息",
+                "可调试性",
+                "可更新性"
+              ],
+              "summary": "上下文工程不是简单堆砌长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息，具有可调试、可更新且更适合Agent工作流的优势。"
+            },
+            "score": 0.83355623
+          },
+          {
+            "doc_id": "d04eba08-1938-40fb-befc-fde9384cb934",
+            "content": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Context Engineering",
+              "title": "上下文工程基础",
+              "category_path": [
+                "学习方法",
+                "上下文工程"
+              ],
+              "tags": [
+                "上下文工程",
+                "提示词",
+                "动态组织",
+                "学习目标",
+                "证据",
+                "历史错误",
+                "当前任务",
+                "Agent 工作流"
+              ],
+              "summary": "上下文工程不是简单堆砌长提示词，而是通过动态组织信息来围绕学习目标、证据、历史错误和当前任务，从而实现可调试、可更新，并更适合 Agent 工作流。"
+            },
+            "score": 0.83355623
+          },
+          {
+            "doc_id": "86a5c34b-816f-40d8-bf81-751b49fd1537",
+            "content": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "上下文工程",
+              "title": "上下文工程基础",
+              "category_path": [
+                "学习系统",
+                "上下文工程"
+              ],
+              "tags": [
+                "上下文工程",
+                "动态组织",
+                "学习目标",
+                "证据",
+                "历史错误",
+                "当前任务",
+                "Agent工作流",
+                "可调试"
+              ],
+              "summary": "上下文工程强调动态组织信息以支持学习目标、利用证据、历史错误和当前任务，具有可调试、可更新的优势，并更适合Agent工作流。"
+            },
+            "score": 0.83355623
+          },
+          {
+            "doc_id": "6f7a0011-aaef-4d5e-91bb-3c4bbd1d82aa",
+            "content": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Context Engineering",
+              "title": "上下文工程基础",
+              "category_path": [
+                "学习技术",
+                "上下文工程",
+                "基础"
+              ],
+              "tags": [
+                "上下文工程",
+                "提示词",
+                "学习目标",
+                "证据",
+                "历史错误",
+                "当前任务",
+                "动态组织",
+                "可调试"
+              ],
+              "summary": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。优势是可调试、可更新，并更适合Agent工作流。"
+            },
+            "score": 0.83355623
+          }
+        ],
+        "auto_context": {
+          "title": "上下文工程提升 Agent 回复质量的原因分析",
+          "current_topic": "上下文工程",
+          "learning_goal": "理解上下文工程通过动态组织信息来提升 Agent 回复质量的机制",
+          "current_task": "解释上下文工程如何通过可调试、可更新和适合 Agent 工作流来提升回复质量",
+          "category_path": [
+            "人工智能",
+            "Agent工程",
+            "上下文工程"
+          ]
+        },
+        "error": null
+      }
+    },
+    {
+      "suite": "explain",
+      "case_id": "explain-redis-001",
+      "passed": false,
+      "details": "missing=['定义', '关键机制', '应用场景'], forbidden=[], answer_len=1131",
+      "metrics": {
+        "answer_length": 1131,
+        "missing_count": 3,
+        "forbidden_count": 0
+      },
+      "payload_preview": {
+        "answer": "Redis 适合用作缓存，主要基于两个核心优势：**极高的性能**和**比传统缓存（如 Memcached）更宽的能力边界**。\n\n---\n\n### 1. **高性能：基于内存的快速操作**\nRedis 的所有数据都存储在**内存**中，这使得它的读写速度远高于像 MySQL 这类依赖磁盘的数据库。\n- **内存访问 vs. 磁盘访问**：内存的访问延迟通常",
+        "context": "[Role & Policies]\n- You are StudyLoop, a patient study agent. Use retrieved evidence and learner history carefully. Be pedagogically clear, concise, and grounded in the supplied study context.\n\n[Learning Goal]\n- 理解 Redis 适合用作缓存的原因，包括高性能和更宽的能力边界。\n\n[Current Task]\n- 解释 Redis 为什么适合做缓存，基于内存操作、功能多样性和与 Memcached 的对比。\n\n[Current Topic]\n- Redis\n\n[Learner State]\n- {\n  \"mastery\": 0.5\n}\n\n[Evidence]\n- {\n  \"content\": \"# Redis 基础模型、数据类型与为什么用它做缓存\\n\\n来源路径：02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md\\n目录主题：Redis / 基础\\nObsidian 标签：redis, cache, memcached\\n\\n## 先记住最核心的模型\\n\\nRedis 顶层可以先理解成一个全局的 `key -> value` 哈希表：\\n\\n```text\\nkey -> value\\n```\\n\\n其中：\\n\\n- `key` 是用户自己定义的名字\\n- `value` 是真正存储的数据对象\\n\\n例如：\\n\\n```text\\n\\\"name\\\"   -> String\\n\\\"orders\\\" -> List\\n\\\"tags\\\"   -> Set\\n\\\"user:1\\\" -> Hash\\n```\\n\\n## Redis 里的 key 和 value 怎么理解\\n\\n### key\\n\\n由用户自己定义，用来定位数据，比如：\\n\\n```text\\nSET name \\\"Alice\\\"\\nLPUSH orders order1 order2\\nSADD tags vip active\\n```\\n\\n这里的 `name`、`orders`、`tags` 都是 key。\\n\\n### value\\n\\nvalue 不是只有字符串，它支持多种数据结构，常见有：\\n\\n- `String`\\n- `List`\\n- `Set`\\n- `Hash`\\n- `ZSet`\",\n  \"doc_id\": \"3b20950a-4227-46b8-a74b-5a7f4280f9a8\",\n  \"metadata\": {\n    \"category_path\": [\n      \"Redis\",\n      \"基础\"\n    ],\n    \"summary\": \"Redis的核心是顶层key-value内存字典结构，value支持String、List、Set、Hash、ZSet等多种数据类型。与Memcached相比，Redis功能更丰富、支持持久化。因其高性能和高并发，常被用作MySQL前的缓存层，以减轻数据库压力。\",\n    \"tags\": [\n      \"Redis\",\n      \"编程\",\n      \"数据库\",\n      \"缓存\",\n      \"obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md\"\n    ],\n    \"title\": \"Redis 基础模型、数据类型与为什么用它做缓存\",\n    \"topic\": \"Redis\"\n  },\n  \"score\": 0.71971995,\n  \"source\": \"obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md\"\n}\n- {\n  \"content\": \"所以 Redis 不是“只能存字符串的缓存”，而是“顶层是 key-value，但 value 可以是不同类型的结构化对象”。\\n\\n## 查询一个 key 时大致发生了什么\\n\\n可以先用一个工程化心智模型理解：\\n\\n1. 对用户传入的 key 计算 hash\\n2. 根据 hash 定位到哈希表中的某个桶\\n3. 在桶内继续比较 key\\n4. 找到匹配项后返回对应 value\\n\\n更稳的表述是：\\n\\n> Redis 顶层用字典结构管理 key，查找时会先通过 hash 快速定位，再处理哈希冲突并比对实际 key。\\n\\n## Redis 和 Memcached 的区别\\n\\n### 相同点\\n\\n- 都基于内存\\n- 都常被当作缓存\\n- 都支持过期时间\\n- 性能都很高\\n\\n### Redis 更常被选中的原因\\n\\n- Redis 支持更多数据类型\\n- Redis 支持持久化\\n- Redis 原生支持更丰富的功能\\n- Redis 有更完整的生态和集群能力\\n\\n### 一个简化对比\\n\\n| 维度 | Redis | Memcached |\\n| --- | --- | --- |\\n| 数据类型 | 丰富 | 更简单，偏纯 KV |\\n| 持久化 | 支持 | 不支持 |\\n| 集群能力 | 原生支持较完整 | 更多依赖客户端 |\\n| 功能扩展 | Lua、发布订阅、事务等 | 相对少 |\",\n  \"doc_id\": \"d9776f87-bb30-4ddc-9244-d4035d9a17d2\",\n  \"metadata\": {\n    \"category_path\": [\n      \"Redis\",\n      \"基础\"\n    ],\n    \"summary\": \"Redis的核心是顶层key-value内存字典结构，value支持String、List、Set、Hash、ZSet等多种数据类型。与Memcached相比，Redis功能更丰富、支持持久化。因其高性能和高并发，常被用作MySQL前的缓存层，以减轻数据库压力。\",\n    \"tags\": [\n      \"Redis\",\n      \"编程\",\n      \"数据库\",\n      \"缓存\",\n      \"obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md\"\n    ],\n    \"title\": \"Redis 基础模型、数据类型与为什么用它做缓存\",\n    \"topic\": \"Redis\"\n  },\n  \"score\": 0.715541,\n  \"source\": \"obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md\"\n}\n- {\n  \"content\": \"所以如果只是非常纯粹的简单缓存，Memcached 也能做；但大多数业务最终还是更偏向 Redis，因为它的能力边界更宽。\\n\\n## 为什么 Redis 很适合做 MySQL 缓存\\n\\n主要是两点：\\n\\n### 1. 高性能\\n\\n- MySQL 很多读操作最终会落到磁盘或更重的存储链路上\\n- Redis 主要操作内存，访问速度更快\\n\\n### 2. 高并发\\n\\n- Redis 单机 QPS 通常明显高于 MySQL\\n- 把热点读请求挡在 Redis，可以大幅减轻数据库压力\\n\\n一句话理解：\\n\\n> Redis 适合放在 MySQL 前面承接高频读请求，让一部分请求直接在缓存层结束，而不是每次都打到数据库。\\n\\n## 但 Redis 不是万能数据库替身\\n\\n把 Redis 当缓存时，要记住两个边界：\\n\\n- 它适合热点、读多写少、可容忍短时最终一致的数据\\n- 不适合轻率地当订单状态、支付状态这类强一致数据的唯一事实来源\\n\\n## 一句话总结\\n\\nRedis 顶层是 `key -> value` 的内存型字典结构，但 value 支持多种数据类型；它之所以常被放到 MySQL 前面做缓存，本质上是因为它更快、更能扛并发。\",\n  \"doc_id\": \"37ff9999-c8d8-40b5-ac9c-9b54d8202087\",\n  \"metadata\": {\n    \"category_path\": [\n      \"Redis\",\n      \"基础\"\n    ],\n    \"summary\": \"Redis的核心是顶层key-value内存字典结构，value支持String、List、Set、Hash、ZSet等多种数据类型。与Memcached相比，Redis功能更丰富、支持持久化。因其高性能和高并发，常被用作MySQL前的缓存层，以减轻数据库压力。\",\n    \"tags\": [\n      \"Redis\",\n      \"编程\",\n      \"数据库\",\n      \"缓存\",\n      \"obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md\"\n    ],\n    \"title\": \"Redis 基础模型、数据类型与为什么用它做缓存\",\n    \"topic\": \"Redis\"\n  },\n  \"score\": 0.8150154,\n  \"source\": \"obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md\"\n}\n- {\n  \"content\": \"# Redis 导航\\n\\n来源路径：02-Redis/00-Redis导航.md\\n目录主题：Redis\\nObsidian 标签：redis, cache, persistence\\n\\n这组笔记是根据今天的 Redis 学习草稿重新整理出来的，重点保留稳定概念、面试高频点和工程实践上的常见答法。\\n\\n## 当前笔记\\n\\n- 01-Redis 基础模型、数据类型与为什么用它做缓存\\n- 01-Redis 单线程、AOF、RDB 与 COW\\n- 01-过期键、内存淘汰与 LRU、LFU\\n- 02-缓存问题、更新策略、Pipeline 与事务\\n\\n## 建议学习顺序\\n\\n1. 先看基础模型，建立 `key -> value` 和“为什么 Redis 适合当缓存”的整体感觉。\\n2. 再看持久化，把 `AOF / RDB / fork / COW` 串起来。\\n3. 然后看过期键和内存淘汰，理解 Redis 在内存压力下怎么做取舍。\\n4. 最后看缓存问题和更新策略，这是最容易和业务结合的部分。\\n\\n## 一句话理解 Redis\\n\\nRedis 可以先理解成一个基于内存、支持多种值类型、读写非常快的 `key-value` 系统。它既能做缓存，也能做一些轻量数据结构服务，但最常见的业务角色仍然是高性能缓存。\\n\\n## 常见面试主线\",\n  \"doc_id\": \"1b5a1fd0-71c3-4479-9ffd-bfaa01f3524c\",\n  \"metadata\": {\n    \"category_path\": [\n      \"编程\",\n      \"数据库\",\n      \"缓存\"\n    ],\n    \"summary\": \"这是一组Redis学习笔记的导航，涵盖Redis的基础模型、数据类型、持久化机制、内存管理和缓存策略，重点保留稳定概念、面试高频点和工程实践常见答法，帮助理解Redis作为高性能缓存的核心原理。\",\n    \"tags\": [\n      \"redis\",\n      \"缓存\",\n      \"持久化\"\n    ],\n    \"title\": \"Redis 导航\",\n    \"topic\": \"Redis\"\n  },\n  \"score\": 0.77929896,\n  \"source\": \"obsidian:02-Redis/00-Redis导航.md\"\n}\n- {\n  \"content\": \"- Redis 为什么快\\n- Redis 为什么适合做 MySQL 缓存\\n- Redis 是不是单线程\\n- AOF 和 RDB 的区别\\n- 过期键和内存淘汰策略\\n- 缓存穿透 / 击穿 / 雪崩\\n- Cache Aside\\n\\n## 关联笔记\\n\\n- MySQL 相关可看 00-MySQL导航\",\n  \"doc_id\": \"732c72f4-515c-41e0-b5ff-bb7c1f046df8\",\n  \"metadata\": {\n    \"category_path\": [\n      \"编程\",\n      \"数据库\",\n      \"缓存\"\n    ],\n    \"summary\": \"这是一组Redis学习笔记的导航，涵盖Redis的基础模型、数据类型、持久化机制、内存管理和缓存策略，重点保留稳定概念、面试高频点和工程实践常见答法，帮助理解Redis作为高性能缓存的核心原理。\",\n    \"tags\": [\n      \"redis\",\n      \"缓存\",\n      \"持久化\"\n    ],\n- Truncated to fit token budget.\n- Truncated to fit token budget.\n- Truncated to fit token budget.\n- Truncated to fit token budget.\n- Truncated to fit token budget.\n- Truncated to fit token budget.\n[Mistake History]\n- Truncated to fit token budget.\n[Learning Notes]\n- Truncated to fit token budget.\n[Conversation Context]\n- Truncated to fit token budget.\n[Output Spec]\n- Truncated to fit token budget.",
+        "evidence": [
+          {
+            "doc_id": "37ff9999-c8d8-40b5-ac9c-9b54d8202087",
+            "content": "所以如果只是非常纯粹的简单缓存，Memcached 也能做；但大多数业务最终还是更偏向 Redis，因为它的能力边界更宽。\n\n## 为什么 Redis 很适合做 MySQL 缓存\n\n主要是两点：\n\n### 1. 高性能\n\n- MySQL 很多读操作最终会落到磁盘或更重的存储链路上\n- Redis 主要操作内存，访问速度更快\n\n### 2. 高并发\n\n- Redis 单机 QPS 通常明显高于 MySQL\n- 把热点读请求挡在 Redis，可以大幅减轻数据库压力\n\n一句话理解：\n\n> Redis 适合放在 MySQL 前面承接高频读请求，让一部分请求直接在缓存层结束，而不是每次都打到数据库。\n\n## 但 Redis 不是万能数据库替身\n\n把 Redis 当缓存时，要记住两个边界：\n\n- 它适合热点、读多写少、可容忍短时最终一致的数据\n- 不适合轻率地当订单状态、支付状态这类强一致数据的唯一事实来源\n\n## 一句话总结\n\nRedis 顶层是 `key -> value` 的内存型字典结构，但 value 支持多种数据类型；它之所以常被放到 MySQL 前面做缓存，本质上是因为它更快、更能扛并发。",
+            "source": "obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md",
+            "metadata": {
+              "topic": "Redis",
+              "title": "Redis 基础模型、数据类型与为什么用它做缓存",
+              "category_path": [
+                "Redis",
+                "基础"
+              ],
+              "tags": [
+                "Redis",
+                "编程",
+                "数据库",
+                "缓存",
+                "obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md"
+              ],
+              "summary": "Redis的核心是顶层key-value内存字典结构，value支持String、List、Set、Hash、ZSet等多种数据类型。与Memcached相比，Redis功能更丰富、支持持久化。因其高性能和高并发，常被用作MySQL前的缓存层，以减轻数据库压力。"
+            },
+            "score": 0.8150154
+          },
+          {
+            "doc_id": "1b5a1fd0-71c3-4479-9ffd-bfaa01f3524c",
+            "content": "# Redis 导航\n\n来源路径：02-Redis/00-Redis导航.md\n目录主题：Redis\nObsidian 标签：redis, cache, persistence\n\n这组笔记是根据今天的 Redis 学习草稿重新整理出来的，重点保留稳定概念、面试高频点和工程实践上的常见答法。\n\n## 当前笔记\n\n- 01-Redis 基础模型、数据类型与为什么用它做缓存\n- 01-Redis 单线程、AOF、RDB 与 COW\n- 01-过期键、内存淘汰与 LRU、LFU\n- 02-缓存问题、更新策略、Pipeline 与事务\n\n## 建议学习顺序\n\n1. 先看基础模型，建立 `key -> value` 和“为什么 Redis 适合当缓存”的整体感觉。\n2. 再看持久化，把 `AOF / RDB / fork / COW` 串起来。\n3. 然后看过期键和内存淘汰，理解 Redis 在内存压力下怎么做取舍。\n4. 最后看缓存问题和更新策略，这是最容易和业务结合的部分。\n\n## 一句话理解 Redis\n\nRedis 可以先理解成一个基于内存、支持多种值类型、读写非常快的 `key-value` 系统。它既能做缓存，也能做一些轻量数据结构服务，但最常见的业务角色仍然是高性能缓存。\n\n## 常见面试主线",
+            "source": "obsidian:02-Redis/00-Redis导航.md",
+            "metadata": {
+              "topic": "Redis",
+              "title": "Redis 导航",
+              "category_path": [
+                "编程",
+                "数据库",
+                "缓存"
+              ],
+              "tags": [
+                "redis",
+                "缓存",
+                "持久化"
+              ],
+              "summary": "这是一组Redis学习笔记的导航，涵盖Redis的基础模型、数据类型、持久化机制、内存管理和缓存策略，重点保留稳定概念、面试高频点和工程实践常见答法，帮助理解Redis作为高性能缓存的核心原理。"
+            },
+            "score": 0.77929896
+          },
+          {
+            "doc_id": "732c72f4-515c-41e0-b5ff-bb7c1f046df8",
+            "content": "- Redis 为什么快\n- Redis 为什么适合做 MySQL 缓存\n- Redis 是不是单线程\n- AOF 和 RDB 的区别\n- 过期键和内存淘汰策略\n- 缓存穿透 / 击穿 / 雪崩\n- Cache Aside\n\n## 关联笔记\n\n- MySQL 相关可看 00-MySQL导航",
+            "source": "obsidian:02-Redis/00-Redis导航.md",
+            "metadata": {
+              "topic": "Redis",
+              "title": "Redis 导航",
+              "category_path": [
+                "编程",
+                "数据库",
+                "缓存"
+              ],
+              "tags": [
+                "redis",
+                "缓存",
+                "持久化"
+              ],
+              "summary": "这是一组Redis学习笔记的导航，涵盖Redis的基础模型、数据类型、持久化机制、内存管理和缓存策略，重点保留稳定概念、面试高频点和工程实践常见答法，帮助理解Redis作为高性能缓存的核心原理。"
+            },
+            "score": 0.7705349
+          },
+          {
+            "doc_id": "3b20950a-4227-46b8-a74b-5a7f4280f9a8",
+            "content": "# Redis 基础模型、数据类型与为什么用它做缓存\n\n来源路径：02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md\n目录主题：Redis / 基础\nObsidian 标签：redis, cache, memcached\n\n## 先记住最核心的模型\n\nRedis 顶层可以先理解成一个全局的 `key -> value` 哈希表：\n\n```text\nkey -> value\n```\n\n其中：\n\n- `key` 是用户自己定义的名字\n- `value` 是真正存储的数据对象\n\n例如：\n\n```text\n\"name\"   -> String\n\"orders\" -> List\n\"tags\"   -> Set\n\"user:1\" -> Hash\n```\n\n## Redis 里的 key 和 value 怎么理解\n\n### key\n\n由用户自己定义，用来定位数据，比如：\n\n```text\nSET name \"Alice\"\nLPUSH orders order1 order2\nSADD tags vip active\n```\n\n这里的 `name`、`orders`、`tags` 都是 key。\n\n### value\n\nvalue 不是只有字符串，它支持多种数据结构，常见有：\n\n- `String`\n- `List`\n- `Set`\n- `Hash`\n- `ZSet`",
+            "source": "obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md",
+            "metadata": {
+              "topic": "Redis",
+              "title": "Redis 基础模型、数据类型与为什么用它做缓存",
+              "category_path": [
+                "Redis",
+                "基础"
+              ],
+              "tags": [
+                "Redis",
+                "编程",
+                "数据库",
+                "缓存",
+                "obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md"
+              ],
+              "summary": "Redis的核心是顶层key-value内存字典结构，value支持String、List、Set、Hash、ZSet等多种数据类型。与Memcached相比，Redis功能更丰富、支持持久化。因其高性能和高并发，常被用作MySQL前的缓存层，以减轻数据库压力。"
+            },
+            "score": 0.71971995
+          },
+          {
+            "doc_id": "d9776f87-bb30-4ddc-9244-d4035d9a17d2",
+            "content": "所以 Redis 不是“只能存字符串的缓存”，而是“顶层是 key-value，但 value 可以是不同类型的结构化对象”。\n\n## 查询一个 key 时大致发生了什么\n\n可以先用一个工程化心智模型理解：\n\n1. 对用户传入的 key 计算 hash\n2. 根据 hash 定位到哈希表中的某个桶\n3. 在桶内继续比较 key\n4. 找到匹配项后返回对应 value\n\n更稳的表述是：\n\n> Redis 顶层用字典结构管理 key，查找时会先通过 hash 快速定位，再处理哈希冲突并比对实际 key。\n\n## Redis 和 Memcached 的区别\n\n### 相同点\n\n- 都基于内存\n- 都常被当作缓存\n- 都支持过期时间\n- 性能都很高\n\n### Redis 更常被选中的原因\n\n- Redis 支持更多数据类型\n- Redis 支持持久化\n- Redis 原生支持更丰富的功能\n- Redis 有更完整的生态和集群能力\n\n### 一个简化对比\n\n| 维度 | Redis | Memcached |\n| --- | --- | --- |\n| 数据类型 | 丰富 | 更简单，偏纯 KV |\n| 持久化 | 支持 | 不支持 |\n| 集群能力 | 原生支持较完整 | 更多依赖客户端 |\n| 功能扩展 | Lua、发布订阅、事务等 | 相对少 |",
+            "source": "obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md",
+            "metadata": {
+              "topic": "Redis",
+              "title": "Redis 基础模型、数据类型与为什么用它做缓存",
+              "category_path": [
+                "Redis",
+                "基础"
+              ],
+              "tags": [
+                "Redis",
+                "编程",
+                "数据库",
+                "缓存",
+                "obsidian:02-Redis/01-基础/01-Redis 基础模型、数据类型与为什么用它做缓存.md"
+              ],
+              "summary": "Redis的核心是顶层key-value内存字典结构，value支持String、List、Set、Hash、ZSet等多种数据类型。与Memcached相比，Redis功能更丰富、支持持久化。因其高性能和高并发，常被用作MySQL前的缓存层，以减轻数据库压力。"
+            },
+            "score": 0.715541
+          }
+        ],
+        "auto_context": {
+          "title": "Redis 缓存适合性解析",
+          "current_topic": "Redis",
+          "learning_goal": "理解 Redis 适合用作缓存的原因，包括高性能和更宽的能力边界。",
+          "current_task": "解释 Redis 为什么适合做缓存，基于内存操作、功能多样性和与 Memcached 的对比。",
+          "category_path": [
+            "Redis",
+            "基础"
+          ]
+        },
+        "error": null
+      }
+    }
+  ]
+}

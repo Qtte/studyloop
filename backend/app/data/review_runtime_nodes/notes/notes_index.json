@@ -1,0 +1,80 @@
+{
+  "169e8664dc95": {
+    "created_at": "2026-06-27T06:34:20.137075+00:00",
+    "id": "169e8664dc95",
+    "metadata": {
+      "category_path": [
+        "人工智能",
+        "智能体"
+      ],
+      "learning_goal": "理解 Context Engineering 的核心概念，并能结合场景解释其作用。",
+      "source": "manual",
+      "summary": "Context engineering keeps learning goals, evidence, and past mistakes in a stable structure. Retrieved evidence should support the answer instead of adding irrelevant details.",
+      "title": "Context engineering keeps learning goals, eviden",
+      "topic": "Context Engineering"
+    },
+    "note_type": "knowledge_item",
+    "path": "169e8664dc95.md",
+    "preview": "## 自动摘要\nContext engineering keeps learning goals, evidence, and past mistakes in a stable structure. Retrieved evidence should support the answer instead of add",
+    "tags": [
+      "Context Engineering",
+      "evidence",
+      "manual",
+      "人工智能",
+      "智能体"
+    ],
+    "title": "Context engineering keeps learning goals, eviden",
+    "updated_at": "2026-06-27T06:34:20.137075+00:00"
+  },
+  "8228b103f215": {
+    "created_at": "2026-06-27T06:34:20.218765+00:00",
+    "id": "8228b103f215",
+    "metadata": {
+      "mastery_after": 0.51,
+      "mastery_before": 0.5,
+      "score": 70,
+      "topic": "Context Engineering"
+    },
+    "note_type": "mistake_record",
+    "path": "8228b103f215.md",
+    "preview": "Question: Why should retrieved evidence be included?\n\nStudent answer: It helps keep the answer grounded in the material.\n\nFeedback: 当前得分 70。主要问题是 missing_eviden",
+    "tags": [
+      "Context Engineering",
+      "missing_evidence"
+    ],
+    "title": "Mistake record: Context Engineering",
+    "updated_at": "2026-06-27T06:34:20.218765+00:00"
+  },
+  "caa59ad9685e": {
+    "created_at": "2026-06-27T06:34:20.144201+00:00",
+    "id": "caa59ad9685e",
+    "metadata": {
+      "score": 55,
+      "topic": "Context Engineering"
+    },
+    "note_type": "mistake_record",
+    "path": "caa59ad9685e.md",
+    "preview": "Learner forgot to cite evidence.",
+    "tags": [
+      "Context Engineering",
+      "missing_evidence"
+    ],
+    "title": "Past mistake",
+    "updated_at": "2026-06-27T06:34:20.144201+00:00"
+  },
+  "d94af39935a2": {
+    "created_at": "2026-06-27T06:34:20.141074+00:00",
+    "id": "d94af39935a2",
+    "metadata": {
+      "topic": "Context Engineering"
+    },
+    "note_type": "learning_note",
+    "path": "d94af39935a2.md",
+    "preview": "Use evidence and learner history together.",
+    "tags": [
+      "Context Engineering"
+    ],
+    "title": "Context note",
+    "updated_at": "2026-06-27T06:34:20.141074+00:00"
+  }
+}

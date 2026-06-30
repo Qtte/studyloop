@@ -1,0 +1,398 @@
+{
+  "generated_at": "2026-06-28T11:43:05",
+  "suite": "retrieval",
+  "runtime_root": "D:\\Code\\Python\\HelloAgents-main\\evals\\runtime",
+  "report_dir": "D:\\Code\\Python\\HelloAgents-main\\evals\\reports",
+  "use_mock_llm": false,
+  "use_qdrant": true,
+  "passed": 2,
+  "failed": 1,
+  "total": 3,
+  "overall_pass_rate": 0.6667,
+  "suite_metrics": {
+    "retrieval": {
+      "total": 3,
+      "passed": 2,
+      "failed": 1,
+      "pass_rate": 0.6667,
+      "avg_hit_at_k": 1.0,
+      "avg_mrr_at_k": 1.0,
+      "avg_precision_at_k": 1.0,
+      "avg_recall_at_k": 0.8333
+    }
+  },
+  "results": [
+    {
+      "suite": "retrieval",
+      "case_id": "retrieval-context-001",
+      "passed": true,
+      "details": "hits=3, topic_hit=True, content_hit=True, hit@k=1.0, mrr@k=1.0, recall@k=0.5, top_topics=['上下文工程', '上下文工程', 'Context Engineering']",
+      "metrics": {
+        "requested_k": 3,
+        "returned_count": 3,
+        "relevant_count": 3,
+        "first_relevant_rank": 1,
+        "hit_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.5,
+        "gold_document_total": 2,
+        "matched_document_total": 1,
+        "matches": [
+          {
+            "rank": 1,
+            "doc_id": "86a5c34b-816f-40d8-bf81-751b49fd1537",
+            "title": "上下文工程基础",
+            "topic": "上下文工程",
+            "matched_by": [
+              "titles"
+            ],
+            "score": 0.700456,
+            "normalized_labels": {
+              "doc_id": "86a5c34b-816f-40d8-bf81-751b49fd1537",
+              "title": "上下文工程基础",
+              "topic": "上下文工程",
+              "source": "eval-seed"
+            }
+          },
+          {
+            "rank": 2,
+            "doc_id": "2c158995-1d95-4ba6-b43a-183ceaccc4ce",
+            "title": "上下文工程基础",
+            "topic": "上下文工程",
+            "matched_by": [
+              "titles"
+            ],
+            "score": 0.700456,
+            "normalized_labels": {
+              "doc_id": "2c158995-1d95-4ba6-b43a-183ceaccc4ce",
+              "title": "上下文工程基础",
+              "topic": "上下文工程",
+              "source": "eval-seed"
+            }
+          },
+          {
+            "rank": 3,
+            "doc_id": "557b32af-4969-430e-ac56-b6fbece6ca0f",
+            "title": "上下文工程基础",
+            "topic": "Context Engineering",
+            "matched_by": [
+              "titles",
+              "topics"
+            ],
+            "score": 0.700456,
+            "normalized_labels": {
+              "doc_id": "557b32af-4969-430e-ac56-b6fbece6ca0f",
+              "title": "上下文工程基础",
+              "topic": "context engineering",
+              "source": "eval-seed"
+            }
+          }
+        ],
+        "topic_hit": true,
+        "content_hit": true
+      },
+      "payload_preview": {
+        "results": [
+          {
+            "doc_id": "86a5c34b-816f-40d8-bf81-751b49fd1537",
+            "content": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "上下文工程",
+              "title": "上下文工程基础",
+              "category_path": [
+                "学习系统",
+                "上下文工程"
+              ],
+              "tags": [
+                "上下文工程",
+                "动态组织",
+                "学习目标",
+                "证据",
+                "历史错误",
+                "当前任务",
+                "Agent工作流",
+                "可调试"
+              ],
+              "summary": "上下文工程强调动态组织信息以支持学习目标、利用证据、历史错误和当前任务，具有可调试、可更新的优势，并更适合Agent工作流。"
+            },
+            "score": 0.700456
+          },
+          {
+            "doc_id": "2c158995-1d95-4ba6-b43a-183ceaccc4ce",
+            "content": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "上下文工程",
+              "title": "上下文工程基础",
+              "category_path": [
+                "学习技术",
+                "人工智能",
+                "上下文工程"
+              ],
+              "tags": [
+                "上下文工程",
+                "学习目标",
+                "证据",
+                "历史错误",
+                "当前任务",
+                "动态组织信息",
+                "可调试性",
+                "可更新性"
+              ],
+              "summary": "上下文工程不是简单堆砌长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息，具有可调试、可更新且更适合Agent工作流的优势。"
+            },
+            "score": 0.700456
+          }
+        ]
+      }
+    },
+    {
+      "suite": "retrieval",
+      "case_id": "retrieval-redis-001",
+      "passed": true,
+      "details": "hits=3, topic_hit=True, content_hit=True, hit@k=1.0, mrr@k=1.0, recall@k=1.0, top_topics=['Redis', 'Redis', 'Redis']",
+      "metrics": {
+        "requested_k": 3,
+        "returned_count": 3,
+        "relevant_count": 3,
+        "first_relevant_rank": 1,
+        "hit_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "gold_document_total": 1,
+        "matched_document_total": 1,
+        "matches": [
+          {
+            "rank": 1,
+            "doc_id": "3c16904f-dd1d-44c8-acce-a8c5a6b77525",
+            "title": "Redis 缓存基础",
+            "topic": "Redis",
+            "matched_by": [
+              "titles",
+              "topics"
+            ],
+            "score": 0.8705341,
+            "normalized_labels": {
+              "doc_id": "3c16904f-dd1d-44c8-acce-a8c5a6b77525",
+              "title": "redis 缓存基础",
+              "topic": "redis",
+              "source": "eval-seed"
+            }
+          },
+          {
+            "rank": 2,
+            "doc_id": "37e582ca-b876-4959-85b0-c5265ec76da8",
+            "title": "Redis 缓存基础",
+            "topic": "Redis",
+            "matched_by": [
+              "titles",
+              "topics"
+            ],
+            "score": 0.8705341,
+            "normalized_labels": {
+              "doc_id": "37e582ca-b876-4959-85b0-c5265ec76da8",
+              "title": "redis 缓存基础",
+              "topic": "redis",
+              "source": "eval-seed"
+            }
+          },
+          {
+            "rank": 3,
+            "doc_id": "1cd7a29e-b2c9-4063-84c6-fbab267af971",
+            "title": "Redis 缓存基础",
+            "topic": "Redis",
+            "matched_by": [
+              "titles",
+              "topics"
+            ],
+            "score": 0.8705341,
+            "normalized_labels": {
+              "doc_id": "1cd7a29e-b2c9-4063-84c6-fbab267af971",
+              "title": "redis 缓存基础",
+              "topic": "redis",
+              "source": "eval-seed"
+            }
+          }
+        ],
+        "topic_hit": true,
+        "content_hit": true
+      },
+      "payload_preview": {
+        "results": [
+          {
+            "doc_id": "3c16904f-dd1d-44c8-acce-a8c5a6b77525",
+            "content": "Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Redis",
+              "title": "Redis 缓存基础",
+              "category_path": [
+                "数据库",
+                "键值数据库",
+                "Redis"
+              ],
+              "tags": [
+                "Redis",
+                "缓存",
+                "键值数据库",
+                "内存数据库",
+                "数据类型"
+              ],
+              "summary": "Redis 是一种以内存为核心的键值数据库，支持 string、hash、list、set 和 zset 等数据类型，广泛应用于缓存、计数器、排行榜和会话存储等场景。"
+            },
+            "score": 0.8705341
+          },
+          {
+            "doc_id": "37e582ca-b876-4959-85b0-c5265ec76da8",
+            "content": "Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Redis",
+              "title": "Redis 缓存基础",
+              "category_path": [
+                "计算机科学",
+                "数据库",
+                "键值数据库",
+                "Redis"
+              ],
+              "tags": [
+                "Redis",
+                "缓存",
+                "键值数据库",
+                "内存数据库",
+                "数据类型"
+              ],
+              "summary": "Redis 是一种基于内存的键值存储数据库，广泛应用于缓存、计数器、排行榜和会话管理。支持的数据类型有 string、hash、list、set 和 zset。"
+            },
+            "score": 0.8705341
+          }
+        ]
+      }
+    },
+    {
+      "suite": "retrieval",
+      "case_id": "retrieval-db-001",
+      "passed": false,
+      "details": "hits=3, topic_hit=False, content_hit=True, hit@k=1.0, mrr@k=1.0, recall@k=1.0, top_topics=['数据库', '数据库', '数据库']",
+      "metrics": {
+        "requested_k": 3,
+        "returned_count": 3,
+        "relevant_count": 3,
+        "first_relevant_rank": 1,
+        "hit_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "gold_document_total": 1,
+        "matched_document_total": 1,
+        "matches": [
+          {
+            "rank": 1,
+            "doc_id": "e9341960-f7a4-47dd-a434-832a8079fa54",
+            "title": "数据库索引与查询",
+            "topic": "数据库",
+            "matched_by": [
+              "titles"
+            ],
+            "score": 0.82159376,
+            "normalized_labels": {
+              "doc_id": "e9341960-f7a4-47dd-a434-832a8079fa54",
+              "title": "数据库索引与查询",
+              "topic": "数据库",
+              "source": "eval-seed"
+            }
+          },
+          {
+            "rank": 2,
+            "doc_id": "8595b703-da53-44c0-b927-d0d1e0d7211e",
+            "title": "数据库索引与查询",
+            "topic": "数据库",
+            "matched_by": [
+              "titles"
+            ],
+            "score": 0.82159376,
+            "normalized_labels": {
+              "doc_id": "8595b703-da53-44c0-b927-d0d1e0d7211e",
+              "title": "数据库索引与查询",
+              "topic": "数据库",
+              "source": "eval-seed"
+            }
+          },
+          {
+            "rank": 3,
+            "doc_id": "372a4a9d-1af0-402b-8c1b-174966a250ae",
+            "title": "数据库索引与查询",
+            "topic": "数据库",
+            "matched_by": [
+              "titles"
+            ],
+            "score": 0.82159376,
+            "normalized_labels": {
+              "doc_id": "372a4a9d-1af0-402b-8c1b-174966a250ae",
+              "title": "数据库索引与查询",
+              "topic": "数据库",
+              "source": "eval-seed"
+            }
+          }
+        ],
+        "topic_hit": false,
+        "content_hit": true
+      },
+      "payload_preview": {
+        "results": [
+          {
+            "doc_id": "e9341960-f7a4-47dd-a434-832a8079fa54",
+            "content": "数据库索引用于提升查询速度，但也会增加写入成本和存储成本。设计索引时需要结合查询条件、排序字段和数据分布来判断。Databases index can improve query speed, but it also increases write cost and storage cost.",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "数据库",
+              "title": "数据库索引与查询",
+              "category_path": [
+                "计算机科学",
+                "数据库系统",
+                "索引设计"
+              ],
+              "tags": [
+                "数据库索引",
+                "查询优化",
+                "性能权衡",
+                "索引设计",
+                "数据分布"
+              ],
+              "summary": "数据库索引能够提升查询速度，但会增加写入成本和存储成本。设计索引时需综合考虑查询条件、排序字段和数据分布等因素。"
+            },
+            "score": 0.82159376
+          },
+          {
+            "doc_id": "8595b703-da53-44c0-b927-d0d1e0d7211e",
+            "content": "数据库索引用于提升查询速度，但也会增加写入成本和存储成本。设计索引时需要结合查询条件、排序字段和数据分布来判断。Databases index can improve query speed, but it also increases write cost and storage cost.",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "数据库",
+              "title": "数据库索引与查询",
+              "category_path": [
+                "计算机科学",
+                "数据库",
+                "索引"
+              ],
+              "tags": [
+                "索引",
+                "查询速度",
+                "写入成本",
+                "存储成本",
+                "查询条件",
+                "排序字段",
+                "数据分布"
+              ],
+              "summary": "数据库索引能提升查询速度，但会增加写入成本和存储成本。设计索引时需综合考虑查询条件、排序字段和数据分布。"
+            },
+            "score": 0.82159376
+          }
+        ]
+      }
+    }
+  ]
+}

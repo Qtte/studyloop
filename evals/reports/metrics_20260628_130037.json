@@ -1,0 +1,1022 @@
+{
+  "generated_at": "2026-06-28T13:00:37",
+  "suite": "all",
+  "runtime_root": "D:\\Code\\Python\\HelloAgents-main\\evals\\runtime",
+  "report_dir": "D:\\Code\\Python\\HelloAgents-main\\evals\\reports",
+  "use_mock_llm": false,
+  "use_qdrant": true,
+  "fresh_runtime_per_case": false,
+  "passed": 9,
+  "failed": 2,
+  "total": 11,
+  "overall_pass_rate": 0.8182,
+  "total_duration_ms": 732685.89,
+  "suite_metrics": {
+    "explain": {
+      "total": 2,
+      "passed": 0,
+      "failed": 2,
+      "pass_rate": 0.0,
+      "avg_duration_ms": 35118.705
+    },
+    "grade": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "avg_duration_ms": 138619.525,
+      "avg_score": 60.0
+    },
+    "quiz": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "avg_duration_ms": 90739.57
+    },
+    "retrieval": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "avg_duration_ms": 1142.1067,
+      "avg_hit_at_k": 1.0,
+      "avg_mrr_at_k": 1.0,
+      "avg_precision_at_k": 0.4444,
+      "avg_recall_at_k": 1.0
+    },
+    "workflow": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "avg_duration_ms": 100151.985,
+      "avg_retry_count": 0.5
+    }
+  },
+  "results": [
+    {
+      "suite": "retrieval",
+      "case_id": "retrieval-context-001",
+      "passed": true,
+      "details": "hits=2, topic_hit=True, content_hit=True, hit@k=1.0, mrr@k=1.0, recall@k=1.0, top_topics=['Context Engineering', 'Context Engineering']",
+      "metrics": {
+        "requested_k": 3,
+        "returned_count": 2,
+        "relevant_count": 2,
+        "first_relevant_rank": 1,
+        "hit_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "precision_at_k": 0.6667,
+        "recall_at_k": 1.0,
+        "gold_document_total": 2,
+        "matched_document_total": 2,
+        "matches": [
+          {
+            "rank": 1,
+            "doc_id": "kb-context-002-chunk-1",
+            "title": "上下文工程的四要素",
+            "topic": "Context Engineering",
+            "matched_by": [
+              "titles",
+              "topics"
+            ],
+            "score": 8,
+            "normalized_labels": {
+              "doc_id": "kb-context-002-chunk-1",
+              "title": "上下文工程的四要素",
+              "topic": "context engineering",
+              "source": "eval-seed"
+            }
+          },
+          {
+            "rank": 2,
+            "doc_id": "kb-context-001-chunk-1",
+            "title": "上下文工程基础",
+            "topic": "Context Engineering",
+            "matched_by": [
+              "titles",
+              "topics"
+            ],
+            "score": 4,
+            "normalized_labels": {
+              "doc_id": "kb-context-001-chunk-1",
+              "title": "上下文工程基础",
+              "topic": "context engineering",
+              "source": "eval-seed"
+            }
+          }
+        ],
+        "topic_hit": true,
+        "content_hit": true,
+        "duration_ms": 1110.24
+      },
+      "payload_preview": {
+        "results": [
+          {
+            "doc_id": "kb-context-002-chunk-1",
+            "content": "构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Context Engineering",
+              "fixture_id": "kb-context-002",
+              "title": "上下文工程的四要素",
+              "category_path": [
+                "人工智能",
+                "智能体"
+              ],
+              "tags": [
+                "Context Engineering",
+                "人工智能",
+                "智能体",
+                "eval-seed",
+                "构建上下文时"
+              ],
+              "summary": "构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。"
+            },
+            "score": 8
+          },
+          {
+            "doc_id": "kb-context-001-chunk-1",
+            "content": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Context Engineering",
+              "fixture_id": "kb-context-001",
+              "title": "上下文工程基础",
+              "category_path": [
+                "人工智能",
+                "智能体"
+              ],
+              "tags": [
+                "Context Engineering",
+                "人工智能",
+                "智能体",
+                "eval-seed",
+                "上下文工程不是简单堆长提示词"
+              ],
+              "summary": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。"
+            },
+            "score": 4
+          }
+        ]
+      }
+    },
+    {
+      "suite": "retrieval",
+      "case_id": "retrieval-redis-001",
+      "passed": true,
+      "details": "hits=1, topic_hit=True, content_hit=True, hit@k=1.0, mrr@k=1.0, recall@k=1.0, top_topics=['Redis']",
+      "metrics": {
+        "requested_k": 3,
+        "returned_count": 1,
+        "relevant_count": 1,
+        "first_relevant_rank": 1,
+        "hit_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "precision_at_k": 0.3333,
+        "recall_at_k": 1.0,
+        "gold_document_total": 1,
+        "matched_document_total": 1,
+        "matches": [
+          {
+            "rank": 1,
+            "doc_id": "kb-redis-001-chunk-1",
+            "title": "Redis 缓存基础",
+            "topic": "Redis",
+            "matched_by": [
+              "titles",
+              "topics"
+            ],
+            "score": 4,
+            "normalized_labels": {
+              "doc_id": "kb-redis-001-chunk-1",
+              "title": "redis 缓存基础",
+              "topic": "redis",
+              "source": "eval-seed"
+            }
+          }
+        ],
+        "topic_hit": true,
+        "content_hit": true,
+        "duration_ms": 1150.91
+      },
+      "payload_preview": {
+        "results": [
+          {
+            "doc_id": "kb-redis-001-chunk-1",
+            "content": "Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Redis",
+              "fixture_id": "kb-redis-001",
+              "title": "Redis 缓存基础",
+              "category_path": [
+                "编程",
+                "数据库",
+                "缓存"
+              ],
+              "tags": [
+                "Redis",
+                "编程",
+                "数据库",
+                "缓存",
+                "eval-seed"
+              ],
+              "summary": "Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。"
+            },
+            "score": 4
+          }
+        ]
+      }
+    },
+    {
+      "suite": "retrieval",
+      "case_id": "retrieval-db-001",
+      "passed": true,
+      "details": "hits=1, topic_hit=True, content_hit=True, hit@k=1.0, mrr@k=1.0, recall@k=1.0, top_topics=['Databases']",
+      "metrics": {
+        "requested_k": 3,
+        "returned_count": 1,
+        "relevant_count": 1,
+        "first_relevant_rank": 1,
+        "hit_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "precision_at_k": 0.3333,
+        "recall_at_k": 1.0,
+        "gold_document_total": 1,
+        "matched_document_total": 1,
+        "matches": [
+          {
+            "rank": 1,
+            "doc_id": "kb-db-001-chunk-1",
+            "title": "数据库索引与查询",
+            "topic": "Databases",
+            "matched_by": [
+              "titles",
+              "topics"
+            ],
+            "score": 4,
+            "normalized_labels": {
+              "doc_id": "kb-db-001-chunk-1",
+              "title": "数据库索引与查询",
+              "topic": "databases",
+              "source": "eval-seed"
+            }
+          }
+        ],
+        "topic_hit": true,
+        "content_hit": true,
+        "duration_ms": 1165.17
+      },
+      "payload_preview": {
+        "results": [
+          {
+            "doc_id": "kb-db-001-chunk-1",
+            "content": "数据库索引用于提升查询速度，但也会增加写入成本和存储成本。设计索引时需要结合查询条件、排序字段和数据分布来判断。Databases index can improve query speed, but it also increases write cost and storage cost.",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Databases",
+              "fixture_id": "kb-db-001",
+              "title": "数据库索引与查询",
+              "category_path": [
+                "人工智能",
+                "智能体"
+              ],
+              "tags": [
+                "Databases",
+                "人工智能",
+                "智能体",
+                "eval-seed",
+                "cost"
+              ],
+              "summary": "数据库索引用于提升查询速度，但也会增加写入成本和存储成本。设计索引时需要结合查询条件、排序字段和数据分布来判断。Databases index can improve query speed, but it also increases write cost and storage cost."
+            },
+            "score": 4
+          }
+        ]
+      }
+    },
+    {
+      "suite": "explain",
+      "case_id": "explain-context-001",
+      "passed": false,
+      "details": "missing=['定义', '关键机制', '应用场景'], forbidden=[], answer_len=721",
+      "metrics": {
+        "answer_length": 721,
+        "missing_count": 3,
+        "forbidden_count": 0,
+        "duration_ms": 36980.51
+      },
+      "payload_preview": {
+        "answer": "上下文工程能提升 Agent 回复质量，关键在于它把**静态的、冗长的提示词**，转变为**动态的、结构化的信息组织方式**。具体来说，它通过围绕**学习目标、外部证据、历史错误反馈和当前任务**这四类核心信息来构建上下文，从而带来几个主要优势：\n\n1.  **更稳定与可靠**：Agent 不再依赖一个可能信息冗余或缺失的“巨型提示词”，而是根据当前任务和历",
+        "context": "[Role & Policies]\n- You are StudyLoop, a patient study agent. Use retrieved evidence and learner history carefully. Be pedagogically clear, concise, and grounded in the supplied study context.\n\n[Learning Goal]\n- 理解上下文工程如何通过动态组织信息（如学习目标、证据、历史错误和当前任务）来提升 Agent 回复质量的原理。\n\n[Current Task]\n- 解释上下文工程对 Agent 回复质量的积极影响，包括其可调试性、可更新性和在 Agent 工作流中的优势。\n\n[Current Topic]\n- Context Engineering\n\n[Learner State]\n- {\n  \"mastery\": 0.5\n}\n\n[Evidence]\n- {\n  \"content\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\",\n  \"doc_id\": \"kb-context-001-chunk-1\",\n  \"metadata\": {\n    \"category_path\": [\n      \"人工智能\",\n      \"智能体\"\n    ],\n    \"fixture_id\": \"kb-context-001\",\n    \"summary\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\",\n    \"tags\": [\n      \"Context Engineering\",\n      \"人工智能\",\n      \"智能体\",\n      \"eval-seed\",\n      \"上下文工程不是简单堆长提示词\"\n    ],\n    \"title\": \"上下文工程基础\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"score\": 4,\n  \"source\": \"eval-seed\"\n}\n- {\n  \"content\": \"构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。\",\n  \"doc_id\": \"kb-context-002-chunk-1\",\n  \"metadata\": {\n    \"category_path\": [\n      \"人工智能\",\n      \"智能体\"\n    ],\n    \"fixture_id\": \"kb-context-002\",\n    \"summary\": \"构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。\",\n    \"tags\": [\n      \"Context Engineering\",\n      \"人工智能\",\n      \"智能体\",\n      \"eval-seed\",\n      \"构建上下文时\"\n    ],\n    \"title\": \"上下文工程的四要素\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"score\": 4,\n  \"source\": \"eval-seed\"\n}\n\n[Mistake History]\n- 暂无历史错题记录。\n\n[Learning Notes]\n- {\n  \"content\": \"## 自动摘要\\n上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 智能体\\n- 主题：Context Engineering\\n- 标签：Context Engineering, 人工智能, 智能体, eval-seed, 上下文工程不是简单堆长提示词\",\n  \"created_at\": \"2026-06-28T04:48:21.126967+00:00\",\n  \"id\": \"a5b90bfe6663\",\n  \"metadata\": {\n    \"category_path\": [\n      \"人工智能\",\n      \"智能体\"\n    ],\n    \"fixture_id\": \"kb-context-001\",\n    \"learning_goal\": \"理解 Context Engineering 的核心概念，并能结合场景解释其作用。\",\n    \"source\": \"eval-seed\",\n    \"summary\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\",\n    \"title\": \"上下文工程基础\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"note_type\": \"knowledge_item\",\n  \"path\": null,\n  \"preview\": \"## 自动摘要\\n上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 智能体\\n- 主题：Context Engineering\\n- 标签：Context Engineer\",\n  \"tags\": [\n    \"Context Engineering\",\n    \"eval-seed\",\n    \"上下文工程不是简单堆长提示词\",\n    \"人工智能\",\n    \"智能体\"\n  ],\n  \"title\": \"上下文工程基础\",\n  \"updated_at\": \"2026-06-28T04:48:21.126967+00:00\"\n}\n- {\n  \"content\": \"## 自动摘要\\n构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 智能体\\n- 主题：Context Engineering\\n- 标签：Context Engineering, 人工智能, 智能体, eval-seed, 构建上下文时\",\n  \"created_at\": \"2026-06-28T04:48:21.133281+00:00\",\n  \"id\": \"73854bee1c8d\",\n  \"metadata\": {\n    \"category_path\": [\n      \"人工智能\",\n      \"智能体\"\n    ],\n    \"fixture_id\": \"kb-context-002\",\n    \"learning_goal\": \"理解 Context Engineering 的核心概念，并能结合场景解释其作用。\",\n    \"source\": \"eval-seed\",\n    \"summary\": \"构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。\",\n    \"title\": \"上下文工程的四要素\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"note_type\": \"knowledge_item\",\n  \"path\": null,\n  \"preview\": \"## 自动摘要\\n构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 智能体\\n- 主题：Context Engineering\\n- 标签：Context Engineeri\",\n  \"tags\": [\n    \"Context Engineering\",\n    \"eval-seed\",\n    \"人工智能\",\n    \"智能体\",\n    \"构建上下文时\"\n  ],\n  \"title\": \"上下文工程的四要素\",\n  \"updated_at\": \"2026-06-28T04:48:21.133281+00:00\"\n}\n\n[Conversation Context]\n- 暂无历史对话上下文。\n\n[Output Spec]\n- Answer in prose with a short explanation, cited evidence, and a next step.",
+        "evidence": [
+          {
+            "doc_id": "kb-context-001-chunk-1",
+            "content": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Context Engineering",
+              "fixture_id": "kb-context-001",
+              "title": "上下文工程基础",
+              "category_path": [
+                "人工智能",
+                "智能体"
+              ],
+              "tags": [
+                "Context Engineering",
+                "人工智能",
+                "智能体",
+                "eval-seed",
+                "上下文工程不是简单堆长提示词"
+              ],
+              "summary": "上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。"
+            },
+            "score": 4
+          },
+          {
+            "doc_id": "kb-context-002-chunk-1",
+            "content": "构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Context Engineering",
+              "fixture_id": "kb-context-002",
+              "title": "上下文工程的四要素",
+              "category_path": [
+                "人工智能",
+                "智能体"
+              ],
+              "tags": [
+                "Context Engineering",
+                "人工智能",
+                "智能体",
+                "eval-seed",
+                "构建上下文时"
+              ],
+              "summary": "构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。"
+            },
+            "score": 4
+          }
+        ],
+        "auto_context": {
+          "title": "上下文工程提升 Agent 回复质量的原因解析",
+          "current_topic": "Context Engineering",
+          "learning_goal": "理解上下文工程如何通过动态组织信息（如学习目标、证据、历史错误和当前任务）来提升 Agent 回复质量的原理。",
+          "current_task": "解释上下文工程对 Agent 回复质量的积极影响，包括其可调试性、可更新性和在 Agent 工作流中的优势。",
+          "category_path": [
+            "人工智能",
+            "Agent 工程",
+            "上下文工程"
+          ]
+        },
+        "error": null
+      }
+    },
+    {
+      "suite": "explain",
+      "case_id": "explain-redis-001",
+      "passed": false,
+      "details": "missing=['定义', '关键机制', '应用场景'], forbidden=[], answer_len=541",
+      "metrics": {
+        "answer_length": 541,
+        "missing_count": 3,
+        "forbidden_count": 0,
+        "duration_ms": 33256.9
+      },
+      "payload_preview": {
+        "answer": "根据提供的学习资料，Redis 之所以非常适合用作缓存，核心在于其**以内存为核心**的设计。\n\n具体来说，它的优势体现在：\n\n1.  **极快的读写速度**：数据存储在内存中，访问速度比基于磁盘的传统数据库快几个数量级。这完美契合了缓存需要快速响应的需求。\n2.  **丰富的数据结构**：资料中提到 Redis 支持 `string`、`hash`、`li",
+        "context": "[Role & Policies]\n- You are StudyLoop, a patient study agent. Use retrieved evidence and learner history carefully. Be pedagogically clear, concise, and grounded in the supplied study context.\n\n[Learning Goal]\n- 理解 Redis 为什么适合做缓存\n\n[Current Task]\n- 解释 Redis 的缓存适用性及其优势\n\n[Current Topic]\n- Redis\n\n[Learner State]\n- {\n  \"mastery\": 0.5\n}\n\n[Evidence]\n- {\n  \"content\": \"Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\",\n  \"doc_id\": \"kb-redis-001-chunk-1\",\n  \"metadata\": {\n    \"category_path\": [\n      \"编程\",\n      \"数据库\",\n      \"缓存\"\n    ],\n    \"fixture_id\": \"kb-redis-001\",\n    \"summary\": \"Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\",\n    \"tags\": [\n      \"Redis\",\n      \"编程\",\n      \"数据库\",\n      \"缓存\",\n      \"eval-seed\"\n    ],\n    \"title\": \"Redis 缓存基础\",\n    \"topic\": \"Redis\"\n  },\n  \"score\": 4,\n  \"source\": \"eval-seed\"\n}\n\n[Mistake History]\n- 暂无历史错题记录。\n\n[Learning Notes]\n- {\n  \"content\": \"## 自动摘要\\nRedis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\\n\\n## 自动分类\\n- 一级/二级分类：编程 / 数据库 / 缓存\\n- 主题：Redis\\n- 标签：Redis, 编程, 数据库, 缓存, eval-seed\",\n  \"created_at\": \"2026-06-28T04:48:21.136901+00:00\",\n  \"id\": \"2175b7a6baa0\",\n  \"metadata\": {\n    \"category_path\": [\n      \"编程\",\n      \"数据库\",\n      \"缓存\"\n    ],\n    \"fixture_id\": \"kb-redis-001\",\n    \"learning_goal\": \"理解 Redis 的核心概念，并能结合场景解释其作用。\",\n    \"source\": \"eval-seed\",\n    \"summary\": \"Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\",\n    \"title\": \"Redis 缓存基础\",\n    \"topic\": \"Redis\"\n  },\n  \"note_type\": \"knowledge_item\",\n  \"path\": null,\n  \"preview\": \"## 自动摘要\\nRedis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\\n\\n## 自动分类\\n- 一级/二级分类：编程 / 数据库 / 缓存\\n- 主题：Redis\\n- 标签：Redis, 编程, 数据库, 缓存, eval-s\",\n  \"tags\": [\n    \"Redis\",\n    \"eval-seed\",\n    \"数据库\",\n    \"缓存\",\n    \"编程\"\n  ],\n  \"title\": \"Redis 缓存基础\",\n  \"updated_at\": \"2026-06-28T04:48:21.136901+00:00\"\n}\n\n[Conversation Context]\n- 暂无历史对话上下文。\n\n[Output Spec]\n- Answer in prose with a short explanation, cited evidence, and a next step.",
+        "evidence": [
+          {
+            "doc_id": "kb-redis-001-chunk-1",
+            "content": "Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Redis",
+              "fixture_id": "kb-redis-001",
+              "title": "Redis 缓存基础",
+              "category_path": [
+                "编程",
+                "数据库",
+                "缓存"
+              ],
+              "tags": [
+                "Redis",
+                "编程",
+                "数据库",
+                "缓存",
+                "eval-seed"
+              ],
+              "summary": "Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。"
+            },
+            "score": 4
+          }
+        ],
+        "auto_context": {
+          "title": "Redis 缓存优势解析",
+          "current_topic": "Redis",
+          "learning_goal": "理解 Redis 为什么适合做缓存",
+          "current_task": "解释 Redis 的缓存适用性及其优势",
+          "category_path": [
+            "缓存技术"
+          ]
+        },
+        "error": null
+      }
+    },
+    {
+      "suite": "quiz",
+      "case_id": "quiz-context-001",
+      "passed": true,
+      "details": "question_count=3, count_ok=True, topic_ok=True, type_ok=True, returned_types=['multiple_choice', 'open_ended']",
+      "metrics": {
+        "question_count": 3,
+        "count_ok": true,
+        "topic_ok": true,
+        "type_ok": true,
+        "duration_ms": 93071.41
+      },
+      "payload_preview": {
+        "quiz": {
+          "question": "请解释上下文工程与传统的‘静态长提示词’方法相比，有哪些主要优势？",
+          "question_type": "open_ended",
+          "reference_answer": "上下文工程的主要优势在于其动态性和结构化。具体包括：1. 可调试性：上下文被组织为独立的模块（如学习目标、证据等），便于定位和修改问题。2. 可更新性：可以方便地单独更新某一部分信息（如最新的外部证据），而无需重写整个提示词。3. 更适合Agent工作流：通过围绕当前任务和历史错误动态裁剪上下文，能使智能体的响应更稳定、更具针对性，优于一次性输入大量信息的静态方法。",
+          "rubric": [
+            "回答核心定义",
+            "解释关键机制",
+            "给出应用或例子"
+          ],
+          "difficulty": "medium"
+        },
+        "quiz_set": {
+          "topic": "Context Engineering",
+          "focus_reason": "该主题是人工智能领域，特别是智能体构建中的关键概念。基于您的学习笔记，本次练习将围绕‘上下文工程’的核心定义、核心优势及其应用场景展开，以帮助您巩固对动态上下文组织方式的理解。",
+          "difficulty": "medium",
+          "question_count": 3,
+          "question_types": [
+            "multiple_choice",
+            "open_ended"
+          ],
+          "questions": [
+            {
+              "question_id": "q1",
+              "question_type": "multiple_choice",
+              "question": "根据学习笔记，在构建上下文时，应重点组织哪四类信息？",
+              "options": [
+                "A. 用户画像、历史对话、知识库、当前意图",
+                "B. 学习目标、外部证据、历史错误反馈、当前任务",
+                "C. 工具描述、系统提示、对话轮次、记忆存储",
+                "D. 输入模板、输出格式、安全规则、性能指标"
+              ],
+              "correct_option": "B. 学习目标、外部证据、历史错误反馈、当前任务",
+              "reference_answer": "正确答案是B。根据笔记，构建上下文时应重点组织的四类信息是：学习目标、外部证据、历史错误反馈、当前任务。这种结构化信息组织方式是上下文工程的核心。",
+              "rubric": [
+                "选择与主题目标及证据使用一致的选项。"
+              ],
+              "difficulty": "medium"
+            },
+            {
+              "question_id": "q2",
+              "question_type": "open_ended",
+              "question": "请解释上下文工程与传统的‘静态长提示词’方法相比，有哪些主要优势？",
+              "options": [],
+              "correct_option": "",
+              "reference_answer": "上下文工程的主要优势在于其动态性和结构化。具体包括：1. 可调试性：上下文被组织为独立的模块（如学习目标、证据等），便于定位和修改问题。2. 可更新性：可以方便地单独更新某一部分信息（如最新的外部证据），而无需重写整个提示词。3. 更适合Agent工作流：通过围绕当前任务和历史错误动态裁剪上下文，能使智能体的响应更稳定、更具针对性，优于一次性输入大量信息的静态方法。",
+              "rubric": [
+                "回答核心定义",
+                "解释关键机制",
+                "给出应用或例子"
+              ],
+              "difficulty": "medium"
+            },
+            {
+              "question_id": "q3",
+              "question_type": "open_ended",
+              "question": "假设你正在设计一个智能体学习助手。请结合上下文工程的四要素，描述在该助手的一次互动中，如何应用上下文工程来生成更有效的回答。",
+              "options": [],
+              "correct_option": "",
+              "reference_answer": "在智能体学习助手的场景中，应用上下文工程可以这样做：1. 学习目标：从用户的当前提问或历史中提取本次交互的具体学习目标（如‘理解三角函数’）。2. 外部证据：检索相关的教材章节、权威解释或高质量例题作为参考证据。3. 历史错误反馈：调取该用户之前在类似知识点上犯过的错误记录，以便在回答中强调易错点。4. 当前任务：明确本次助手需要完成的任务是‘解释概念’还是‘解答习题’。通过动态整合这四类信息来构建上下文，助手能给出更精准、个性化且能避免用户重蹈覆辙的回答，而不是给出一个通用的、固定的答案。",
+              "rubric": [
+                "选择与主题目标及证据使用一致的选项。"
+              ],
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "context": "[Role & Policies]\n- You are StudyLoop, a patient study agent. Use retrieved evidence and learner history carefully. Be pedagogically clear, concise, and grounded in the supplied study context.\n\n[Learning Goal]\n- 通过练习题测试和巩固对上下文工程的理解\n\n[Current Task]\n- 生成一组围绕上下文工程的练习题\n\n[Current Topic]\n- Context Engineering\n\n[Learner State]\n- {\n  \"mastery\": 0.5\n}\n\n[Evidence]\n- 暂未检索到外部证据。\n\n[Mistake History]\n- 暂无历史错题记录。\n\n[Learning Notes]\n- {\n  \"content\": \"## 自动摘要\\n构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 智能体\\n- 主题：Context Engineering\\n- 标签：Context Engineering, 人工智能, 智能体, eval-seed, 构建上下文时\",\n  \"created_at\": \"2026-06-28T04:48:21.133281+00:00\",\n  \"id\": \"73854bee1c8d\",\n  \"metadata\": {\n    \"category_path\": [\n      \"人工智能\",\n      \"智能体\"\n    ],\n    \"fixture_id\": \"kb-context-002\",\n    \"learning_goal\": \"理解 Context Engineering 的核心概念，并能结合场景解释其作用。\",\n    \"source\": \"eval-seed\",\n    \"summary\": \"构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。\",\n    \"title\": \"上下文工程的四要素\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"note_type\": \"knowledge_item\",\n  \"path\": null,\n  \"preview\": \"## 自动摘要\\n构建上下文时，可以重点组织四类信息：学习目标、外部证据、历史错误反馈、当前任务。Agent 根据这些结构化信息裁剪上下文，通常比静态长提示词更稳定。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 智能体\\n- 主题：Context Engineering\\n- 标签：Context Engineeri\",\n  \"tags\": [\n    \"Context Engineering\",\n    \"eval-seed\",\n    \"人工智能\",\n    \"智能体\",\n    \"构建上下文时\"\n  ],\n  \"title\": \"上下文工程的四要素\",\n  \"updated_at\": \"2026-06-28T04:48:21.133281+00:00\"\n}\n- {\n  \"content\": \"## 自动摘要\\n上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 智能体\\n- 主题：Context Engineering\\n- 标签：Context Engineering, 人工智能, 智能体, eval-seed, 上下文工程不是简单堆长提示词\",\n  \"created_at\": \"2026-06-28T04:48:21.126967+00:00\",\n  \"id\": \"a5b90bfe6663\",\n  \"metadata\": {\n    \"category_path\": [\n      \"人工智能\",\n      \"智能体\"\n    ],\n    \"fixture_id\": \"kb-context-001\",\n    \"learning_goal\": \"理解 Context Engineering 的核心概念，并能结合场景解释其作用。\",\n    \"source\": \"eval-seed\",\n    \"summary\": \"上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\",\n    \"title\": \"上下文工程基础\",\n    \"topic\": \"Context Engineering\"\n  },\n  \"note_type\": \"knowledge_item\",\n  \"path\": null,\n  \"preview\": \"## 自动摘要\\n上下文工程不是简单堆长提示词，而是围绕学习目标、证据、历史错误和当前任务来动态组织信息。这样做的优势是可调试、可更新，并且更适合 Agent 工作流。\\n\\n## 自动分类\\n- 一级/二级分类：人工智能 / 智能体\\n- 主题：Context Engineering\\n- 标签：Context Engineer\",\n  \"tags\": [\n    \"Context Engineering\",\n    \"eval-seed\",\n    \"上下文工程不是简单堆长提示词\",\n    \"人工智能\",\n    \"智能体\"\n  ],\n  \"title\": \"上下文工程基础\",\n  \"updated_at\": \"2026-06-28T04:48:21.126967+00:00\"\n}\n\n[Conversation Context]\n- 暂无历史对话上下文。\n\n[Output Spec]\n- Return strict JSON with keys question, reference_answer, rubric, difficulty.",
+        "evidence": [],
+        "auto_context": {
+          "title": "上下文工程练习题生成简报",
+          "current_topic": "上下文工程",
+          "learning_goal": "通过练习题测试和巩固对上下文工程的理解",
+          "current_task": "生成一组围绕上下文工程的练习题",
+          "category_path": [
+            "计算机科学",
+            "人工智能",
+            "上下文工程"
+          ]
+        },
+        "error": null
+      }
+    },
+    {
+      "suite": "quiz",
+      "case_id": "quiz-redis-001",
+      "passed": true,
+      "details": "question_count=3, count_ok=True, topic_ok=True, type_ok=True, returned_types=['multiple_choice', 'open_ended']",
+      "metrics": {
+        "question_count": 3,
+        "count_ok": true,
+        "topic_ok": true,
+        "type_ok": true,
+        "duration_ms": 88407.73
+      },
+      "payload_preview": {
+        "quiz": {
+          "question": "请简述Redis作为缓存使用时，其核心工作原理和一个典型的应用场景。",
+          "question_type": "open_ended",
+          "reference_answer": "Redis作为缓存时，其核心原理是利用其基于内存的高速存储特性。应用程序将频繁访问或计算成本高的数据存入Redis，后续请求可直接从Redis中快速读取，从而减轻后端数据库压力并提升响应速度。一个典型应用场景是‘会话存储’，将用户登录后的会话信息缓存到Redis中，实现快速的状态验证和用户信息获取。",
+          "rubric": [
+            "回答核心定义",
+            "解释关键机制",
+            "给出应用或例子"
+          ],
+          "difficulty": "medium"
+        },
+        "quiz_set": {
+          "topic": "Redis缓存基础",
+          "focus_reason": "当前学习目标为掌握Redis缓存的基本概念、常见数据类型和应用场景。提供的证据中明确列出了Redis的核心特性、应用方向和主要数据类型，是设计本练习题的直接依据。根据学习者的掌握程度（0.5），问题设计将由概念辨析逐步过渡到应用场景分析，以帮助巩固和提升理解。",
+          "difficulty": "medium",
+          "question_count": 3,
+          "question_types": [
+            "multiple_choice",
+            "open_ended"
+          ],
+          "questions": [
+            {
+              "question_id": "q1",
+              "question_type": "multiple_choice",
+              "question": "以下哪项不是 Redis 官方支持的基本数据类型？",
+              "options": [
+                "A. String",
+                "B. Hash",
+                "C. List",
+                "D. Array"
+              ],
+              "correct_option": "D. Array",
+              "reference_answer": "D",
+              "rubric": [
+                "选择与主题目标及证据使用一致的选项。"
+              ],
+              "difficulty": "medium"
+            },
+            {
+              "question_id": "q2",
+              "question_type": "open_ended",
+              "question": "请简述Redis作为缓存使用时，其核心工作原理和一个典型的应用场景。",
+              "options": [],
+              "correct_option": "",
+              "reference_answer": "Redis作为缓存时，其核心原理是利用其基于内存的高速存储特性。应用程序将频繁访问或计算成本高的数据存入Redis，后续请求可直接从Redis中快速读取，从而减轻后端数据库压力并提升响应速度。一个典型应用场景是‘会话存储’，将用户登录后的会话信息缓存到Redis中，实现快速的状态验证和用户信息获取。",
+              "rubric": [
+                "回答核心定义",
+                "解释关键机制",
+                "给出应用或例子"
+              ],
+              "difficulty": "medium"
+            },
+            {
+              "question_id": "q3",
+              "question_type": "multiple_choice",
+              "question": "在Redis中，最适合用来实现“用户积分排行榜”功能的数据类型是？",
+              "options": [
+                "A. String",
+                "B. List",
+                "C. Set",
+                "D. Sorted Set (zset)"
+              ],
+              "correct_option": "D. Sorted Set (zset)",
+              "reference_answer": "D",
+              "rubric": [
+                "选择与主题目标及证据使用一致的选项。"
+              ],
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "context": "[Role & Policies]\n- You are StudyLoop, a patient study agent. Use retrieved evidence and learner history carefully. Be pedagogically clear, concise, and grounded in the supplied study context.\n\n[Learning Goal]\n- 掌握 Redis 缓存的基本概念、常见数据类型及其在缓存中的应用\n\n[Current Task]\n- 生成一组围绕 Redis 缓存基础的练习题\n\n[Current Topic]\n- Redis\n\n[Learner State]\n- {\n  \"mastery\": 0.5\n}\n\n[Evidence]\n- {\n  \"content\": \"Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\",\n  \"doc_id\": \"kb-redis-001-chunk-1\",\n  \"metadata\": {\n    \"category_path\": [\n      \"编程\",\n      \"数据库\",\n      \"缓存\"\n    ],\n    \"fixture_id\": \"kb-redis-001\",\n    \"summary\": \"Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\",\n    \"tags\": [\n      \"Redis\",\n      \"编程\",\n      \"数据库\",\n      \"缓存\",\n      \"eval-seed\"\n    ],\n    \"title\": \"Redis 缓存基础\",\n    \"topic\": \"Redis\"\n  },\n  \"score\": 4,\n  \"source\": \"eval-seed\"\n}\n\n[Mistake History]\n- 暂无历史错题记录。\n\n[Learning Notes]\n- {\n  \"content\": \"## 自动摘要\\nRedis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\\n\\n## 自动分类\\n- 一级/二级分类：编程 / 数据库 / 缓存\\n- 主题：Redis\\n- 标签：Redis, 编程, 数据库, 缓存, eval-seed\",\n  \"created_at\": \"2026-06-28T04:48:21.136901+00:00\",\n  \"id\": \"2175b7a6baa0\",\n  \"metadata\": {\n    \"category_path\": [\n      \"编程\",\n      \"数据库\",\n      \"缓存\"\n    ],\n    \"fixture_id\": \"kb-redis-001\",\n    \"learning_goal\": \"理解 Redis 的核心概念，并能结合场景解释其作用。\",\n    \"source\": \"eval-seed\",\n    \"summary\": \"Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\",\n    \"title\": \"Redis 缓存基础\",\n    \"topic\": \"Redis\"\n  },\n  \"note_type\": \"knowledge_item\",\n  \"path\": null,\n  \"preview\": \"## 自动摘要\\nRedis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。\\n\\n## 自动分类\\n- 一级/二级分类：编程 / 数据库 / 缓存\\n- 主题：Redis\\n- 标签：Redis, 编程, 数据库, 缓存, eval-s\",\n  \"tags\": [\n    \"Redis\",\n    \"eval-seed\",\n    \"数据库\",\n    \"缓存\",\n    \"编程\"\n  ],\n  \"title\": \"Redis 缓存基础\",\n  \"updated_at\": \"2026-06-28T04:48:21.136901+00:00\"\n}\n\n[Conversation Context]\n- 暂无历史对话上下文。\n\n[Output Spec]\n- Return strict JSON with keys question, reference_answer, rubric, difficulty.",
+        "evidence": [
+          {
+            "doc_id": "kb-redis-001-chunk-1",
+            "content": "Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。",
+            "source": "eval-seed",
+            "metadata": {
+              "topic": "Redis",
+              "fixture_id": "kb-redis-001",
+              "title": "Redis 缓存基础",
+              "category_path": [
+                "编程",
+                "数据库",
+                "缓存"
+              ],
+              "tags": [
+                "Redis",
+                "编程",
+                "数据库",
+                "缓存",
+                "eval-seed"
+              ],
+              "summary": "Redis 是以内存为核心的键值数据库，常用于缓存、计数器、排行榜和会话存储。常见数据类型包括 string、hash、list、set 和 zset。"
+            },
+            "score": 4
+          }
+        ],
+        "auto_context": {
+          "title": "Redis 缓存基础练习题生成任务",
+          "current_topic": "Redis 缓存基础",
+          "learning_goal": "掌握 Redis 缓存的基本概念、常见数据类型及其在缓存中的应用",
+          "current_task": "生成一组围绕 Redis 缓存基础的练习题",
+          "category_path": [
+            "技术",
+            "数据库",
+            "Redis",
+            "缓存基础"
+          ]
+        },
+        "error": null
+      }
+    },
+    {
+      "suite": "grade",
+      "case_id": "grade-context-001",
+      "passed": true,
+      "details": "score=60.0, score_ok=True, mistake_type=shallow_answer, type_ok=True, allowed_types=['application_weak', 'correct', 'partial_understanding', 'shallow_answer']",
+      "metrics": {
+        "score": 60.0,
+        "score_ok": true,
+        "mistake_type": "shallow_answer",
+        "type_ok": true,
+        "duration_ms": 147977.26
+      },
+      "payload_preview": {
+        "result": {
+          "score": 60,
+          "mistake_type": "shallow_answer",
+          "feedback": "你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。",
+          "evidence_used": [],
+          "suggested_note": "回到核心概念，结合检索到的证据重写一版更完整的回答。"
+        },
+        "mastery_before": 0.5,
+        "mastery_after": 0.51,
+        "mistake_record_note": {
+          "id": "2c7b49bccb34",
+          "title": "Mistake record: Context Engineering",
+          "note_type": "mistake_record",
+          "tags": [
+            "Context Engineering",
+            "shallow_answer"
+          ],
+          "metadata": {
+            "score": 60,
+            "topic": "Context Engineering",
+            "mastery_before": 0.5,
+            "mastery_after": 0.51
+          },
+          "created_at": "2026-06-28T04:53:37.855942+00:00",
+          "updated_at": "2026-06-28T04:53:37.855942+00:00",
+          "preview": "Question: 请解释上下文工程的核心概念，并给出一个应用场景。\n\nStudent answer: 上下文工程就是给模型更多上下文，让它回答得更好，比如做学习助手。\n\nFeedback: 你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。\n\nSuggested note: 回到核心概念，结合",
+          "content": "Question: 请解释上下文工程的核心概念，并给出一个应用场景。\n\nStudent answer: 上下文工程就是给模型更多上下文，让它回答得更好，比如做学习助手。\n\nFeedback: 你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。\n\nSuggested note: 回到核心概念，结合检索到的证据重写一版更完整的回答。",
+          "path": null
+        },
+        "next_plan": {
+          "summary": "学习者对Context Engineering有初步认知，已能抓住‘非简单堆砌提示词’及‘四要素’的关键。当前回答深度不足（得分60，错误类型为‘浅层回答’），需在精准定义、机制原理和具体应用场景上进行强化。掌握度（0.51）处于中等水平，计划应聚焦于从概念记忆向理解与应用提升。",
+          "focus_areas": [
+            "Context Engineering的核心定义与设计哲学（对比静态长提示词）",
+            "四类上下文信息（学习目标、外部证据、历史错误、当前任务）的具体作用与组织逻辑",
+            "Context Engineering在提升AI智能体工作流稳定性与可调试性方面的具体机制和优势"
+          ],
+          "next_actions": [
+            "回顾并重写‘上下文工程基础’的核心概念总结，明确阐述其与‘静态长提示词’的本质区别。",
+            "结合笔记‘上下文工程的四要素’，以具体例子（如本学习系统本身）说明每类信息如何被动态组织与裁剪。",
+            "尝试用自己的话解释，为何基于四要素构建的上下文能提升Agent工作流的‘可调试性’和‘可更新性’。"
+          ],
+          "recommended_question_types": [
+            "定义辨析题：直接对比“静态提示工程”与“动态上下文工程”，要求列出关键差异。",
+            "要素分析题：给定一个场景，要求识别并阐述其中可能涉及的四类上下文信息及其组织目的。",
+            "场景应用题：描述一个智能体（如客服机器人）在处理复杂请求时出错的情景，设计一个利用Context Engineering（特别是历史错误反馈）来改进其表现的方案。"
+          ]
+        },
+        "reference_answer": "上下文工程强调围绕学习目标、证据、历史错误和当前任务动态组织信息，从而让 Agent 的回答更稳定、更可调试。应用场景包括学习助手根据薄弱点生成解释和练习。",
+        "reference_rubric": [
+          "回答切题",
+          "概念准确",
+          "有场景或机制说明"
+        ],
+        "auto_context": {
+          "title": "上下文工程学习评估简报",
+          "current_topic": "Context Engineering",
+          "learning_goal": "评估学习者的答案完整性、准确性和应用性",
+          "current_task": "评估学习者的答案完整性、准确性和应用性",
+          "category_path": [
+            "学习",
+            "评估",
+            "上下文工程"
+          ]
+        },
+        "remediation_quiz": {
+          "question": "请解释上下文工程的核心概念，并给出一个具体的应用场景。",
+          "question_type": "open_ended",
+          "reference_answer": "上下文工程的核心概念是动态组织信息，围绕学习目标、外部证据、历史错误反馈和当前任务来构建上下文，而不是简单堆叠长提示词。这种方法可调试、可更新，适合智能体工作流。一个应用场景是在智能学习助手系统中，根据用户的学习历史、当前学习目标和相关证据，动态生成个性化的辅导内容和反馈。",
+          "rubric": [
+            "回答核心定义",
+            "解释关键机制",
+            "给出应用或例子"
+          ],
+          "difficulty": "medium"
+        },
+        "retry_count": 1,
+        "mastery_threshold": 0.6,
+        "error": "Structured output repair fallback used for GradingResult."
+      }
+    },
+    {
+      "suite": "grade",
+      "case_id": "grade-redis-001",
+      "passed": true,
+      "details": "score=60.0, score_ok=True, mistake_type=shallow_answer, type_ok=True, allowed_types=['application_weak', 'correct', 'partial_understanding', 'shallow_answer']",
+      "metrics": {
+        "score": 60.0,
+        "score_ok": true,
+        "mistake_type": "shallow_answer",
+        "type_ok": true,
+        "duration_ms": 129261.79
+      },
+      "payload_preview": {
+        "result": {
+          "score": 60,
+          "mistake_type": "shallow_answer",
+          "feedback": "你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。",
+          "evidence_used": [
+            "eval-seed"
+          ],
+          "suggested_note": "回到核心概念，结合检索到的证据重写一版更完整的回答。"
+        },
+        "mastery_before": 0.5,
+        "mastery_after": 0.51,
+        "mistake_record_note": {
+          "id": "ad4d75128e7d",
+          "title": "Mistake record: Redis",
+          "note_type": "mistake_record",
+          "tags": [
+            "Redis",
+            "shallow_answer"
+          ],
+          "metadata": {
+            "score": 60,
+            "topic": "Redis",
+            "mastery_before": 0.5,
+            "mastery_after": 0.51
+          },
+          "created_at": "2026-06-28T04:55:50.866208+00:00",
+          "updated_at": "2026-06-28T04:55:50.866208+00:00",
+          "preview": "Question: Redis 为什么适合做缓存？\n\nStudent answer: Redis 很快，因为在内存里，所以常用来做缓存。\n\nFeedback: 你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。\n\nSuggested note: 回到核心概念，结合检索到的证据重写一版更完整的回答",
+          "content": "Question: Redis 为什么适合做缓存？\n\nStudent answer: Redis 很快，因为在内存里，所以常用来做缓存。\n\nFeedback: 你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。\n\nSuggested note: 回到核心概念，结合检索到的证据重写一版更完整的回答。",
+          "path": null
+        },
+        "next_plan": {
+          "summary": "学习者对Redis缓存有初步理解，回答覆盖了部分内容，但基于评分（60分）和掌握程度（0.51），回答较为浅显，需要补全核心定义、关键机制和应用说明。",
+          "focus_areas": [
+            "Redis的核心定义：内存存储结构、键值模型及其在缓存中的角色。",
+            "关键机制：高性能读写原因、数据结构支持、缓存优势如低延迟和高吞吐。",
+            "具体应用：实际场景如缓存策略、会话存储、排行榜，以及常见数据结构的使用。"
+          ],
+          "next_actions": [
+            "基于反馈重写一个更完整的回答，涵盖Redis的核心特性、优势和应用场景。",
+            "复习Redis的内存结构和数据类型，结合学习笔记深化理解。",
+            "练习应用型问题，例如描述Redis在真实项目中的缓存实现。"
+          ],
+          "recommended_question_types": [
+            "解释型问题：如'Redis如何实现高性能读写？'",
+            "应用型问题：如'举例说明Redis在电商网站中作为缓存的使用。'",
+            "比较型问题：如'Redis与Memcached作为缓存有哪些主要区别？'"
+          ]
+        },
+        "reference_answer": "Redis 基于内存访问，延迟低，支持多种数据结构，适合作为高频读场景下的缓存层，但需要关注持久化和缓存失效策略。",
+        "reference_rubric": [
+          "回答切题",
+          "概念准确",
+          "有场景或机制说明"
+        ],
+        "auto_context": {
+          "title": "Redis 缓存机制评估任务",
+          "current_topic": "Redis",
+          "learning_goal": "理解 Redis 作为缓存的特性和优势，包括其内存存储结构、高性能读写、数据结构支持以及常见应用场景。",
+          "current_task": "评估学习者对问题 'Redis 为什么适合做缓存？' 的回答，检查其完整性、准确性和实际应用能力。",
+          "category_path": [
+            "计算机科学",
+            "数据库",
+            "键值存储",
+            "Redis"
+          ]
+        },
+        "remediation_quiz": {
+          "question": "请详细阐述Redis为什么适合用作缓存。你的回答应至少包含其核心定义、主要技术优势以及如何利用其数据结构支持常见缓存场景。",
+          "question_type": "open_ended",
+          "reference_answer": "Redis适合做缓存主要基于以下几个方面：\n1.  **核心定义与架构**：Redis是一个开源的、基于内存的数据结构存储系统，它可以用作数据库、缓存和消息中间件。作为缓存时，它以键值对的形式存储数据。\n2.  **高性能优势**：Redis将数据存储在内存中，读写速度极快，微秒级的响应时间能有效应对高并发访问。同时，它支持将内存数据异步持久化到磁盘（RDB和AOF），兼顾了性能与数据安全。\n3.  **灵活的数据类型支持**：Redis提供了丰富的数据结构（如String, Hash, List, Set, Sorted Set），这使得它在缓存场景中非常灵活。例如：\n    *   **String**：可用于缓存简单的键值对，如用户信息、Session、网页片段。\n    *   **Hash**：适合缓存对象，如用户资料、商品详情，可进行部分字段的读写。\n    *   **List/Sorted Set**：可用于实现缓存队列或带权重的排行榜。\n4.  **其他特性**：Redis是单线程模型（主要处理逻辑），避免了多线程竞争，简化了设计，也使其操作具有原子性。同时，它支持键的过期时间设置（TTL），便于管理缓存生命周期。",
+          "rubric": [
+            "回答核心定义",
+            "解释关键机制",
+            "给出应用或例子"
+          ],
+          "difficulty": "medium"
+        },
+        "retry_count": 1,
+        "mastery_threshold": 0.6,
+        "error": "Structured output repair fallback used for GradingResult."
+      }
+    },
+    {
+      "suite": "workflow",
+      "case_id": "workflow-remediation-001",
+      "passed": true,
+      "details": "retry_count=1, retry_ok=True, remediation_ok=True, has_remediation_quiz=True",
+      "metrics": {
+        "retry_count": 1,
+        "retry_ok": true,
+        "remediation_ok": true,
+        "has_remediation_quiz": true,
+        "duration_ms": 125524.06
+      },
+      "payload_preview": {
+        "result": {
+          "score": 60,
+          "mistake_type": "shallow_answer",
+          "feedback": "你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。",
+          "evidence_used": [],
+          "suggested_note": "回到核心概念，结合检索到的证据重写一版更完整的回答。"
+        },
+        "mastery_before": 0.35,
+        "mastery_after": 0.36,
+        "mistake_record_note": {
+          "id": "81a9e9d88e7b",
+          "title": "Mistake record: Context Engineering",
+          "note_type": "mistake_record",
+          "tags": [
+            "Context Engineering",
+            "shallow_answer"
+          ],
+          "metadata": {
+            "score": 60,
+            "topic": "Context Engineering",
+            "mastery_before": 0.35,
+            "mastery_after": 0.36
+          },
+          "created_at": "2026-06-28T04:58:03.987336+00:00",
+          "updated_at": "2026-06-28T04:58:03.987336+00:00",
+          "preview": "Question: 请解释上下文工程的核心概念，并给出一个应用场景。\n\nStudent answer: 就是保存聊天记录，方便以后继续聊天。\n\nFeedback: 你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。\n\nSuggested note: 回到核心概念，结合检索到的证据重写一版更完整的",
+          "content": "Question: 请解释上下文工程的核心概念，并给出一个应用场景。\n\nStudent answer: 就是保存聊天记录，方便以后继续聊天。\n\nFeedback: 你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。\n\nSuggested note: 回到核心概念，结合检索到的证据重写一版更完整的回答。",
+          "path": null
+        },
+        "next_plan": {
+          "summary": "你对上下文工程有了初步接触，但目前的理解仍停留在表面（评分60，掌握度36%）。核心问题在于未能深入掌握其定义、机制与应用场景。你需要从核心概念出发，系统性地补强。",
+          "focus_areas": [
+            "核心定义：上下文工程与简单堆砌长提示词的根本区别。",
+            "关键机制：上下文是如何被“工程化”动态构建与裁剪的？",
+            "应用理解：如何将四类信息（学习目标、证据、历史、任务）整合并用于解决具体问题。"
+          ],
+          "next_actions": [
+            "概念回顾：基于你的笔记《上下文工程基础》和《上下文工程的四要素》，用一句话总结上下文工程的核心思想。",
+            "对比分析：思考并写下“静态长提示词”和“动态上下文工程”在可控性、可调试性和对Agent适应性上的具体优劣对比。",
+            "场景应用：假设你要为一个“智能客服Agent”设计上下文，请具体描述你将如何为它组织“学习目标”、“当前任务”和“历史错误反馈”这三类信息。"
+          ],
+          "recommended_question_types": [
+            "概念辨析题：区分相似概念，例如“上下文工程”与“提示词优化”。",
+            "机制分析题：解释上下文动态构建的流程和优势。",
+            "场景应用题：针对具体任务（如代码生成、问答），设计上下文包含的要素与组织方式。"
+          ]
+        },
+        "reference_answer": "上下文工程强调围绕学习目标、证据、历史错误和当前任务动态组织信息，从而让 Agent 的回答更稳定、更可调试。应用场景包括学习助手根据薄弱点生成解释和练习。",
+        "reference_rubric": [
+          "回答切题",
+          "概念准确",
+          "有场景或机制说明"
+        ],
+        "auto_context": {
+          "title": "上下文工程核心概念与应用评估任务",
+          "current_topic": "Context Engineering",
+          "learning_goal": "理解上下文工程的核心概念，并能将其应用于具体场景。",
+          "current_task": "评估学习者答案的完整性、准确性和应用性。",
+          "category_path": [
+            "计算机科学",
+            "上下文工程",
+            "评估"
+          ]
+        },
+        "remediation_quiz": {
+          "question": "请解释上下文工程的核心概念，并给出一个应用场景。",
+          "question_type": "open_ended",
+          "reference_answer": "上下文工程的核心概念是指在人工智能或软件系统中，通过设计、管理和利用上下文信息（如对话历史、用户数据、环境状态）来增强系统理解和交互能力的方法。关键机制包括：存储和检索上下文数据、整合多源信息、动态更新上下文以维持连续性。例如，在智能客服系统中，上下文工程允许机器人记住用户之前的咨询记录、偏好和问题进度，从而提供更个性化、连贯的解答，提升用户体验和问题解决效率。",
+          "rubric": [
+            "回答核心定义",
+            "解释关键机制",
+            "给出应用或例子"
+          ],
+          "difficulty": "medium"
+        },
+        "retry_count": 1,
+        "mastery_threshold": 0.6,
+        "error": "Structured output repair fallback used for GradingResult."
+      }
+    },
+    {
+      "suite": "workflow",
+      "case_id": "workflow-stable-001",
+      "passed": true,
+      "details": "retry_count=0, retry_ok=True, remediation_ok=True, has_remediation_quiz=False",
+      "metrics": {
+        "retry_count": 0,
+        "retry_ok": true,
+        "remediation_ok": true,
+        "has_remediation_quiz": false,
+        "duration_ms": 74779.91
+      },
+      "payload_preview": {
+        "result": {
+          "score": 60,
+          "mistake_type": "shallow_answer",
+          "feedback": "你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。",
+          "evidence_used": [
+            "eval-seed"
+          ],
+          "suggested_note": "回到核心概念，结合检索到的证据重写一版更完整的回答。"
+        },
+        "mastery_before": 0.75,
+        "mastery_after": 0.76,
+        "mistake_record_note": {
+          "id": "912c022762e6",
+          "title": "Mistake record: Redis",
+          "note_type": "mistake_record",
+          "tags": [
+            "Redis",
+            "shallow_answer"
+          ],
+          "metadata": {
+            "score": 60,
+            "topic": "Redis",
+            "mastery_before": 0.75,
+            "mastery_after": 0.76
+          },
+          "created_at": "2026-06-28T05:00:12.093930+00:00",
+          "updated_at": "2026-06-28T05:00:12.093930+00:00",
+          "preview": "Question: Redis 为什么适合做缓存？\n\nStudent answer: Redis 是内存数据库，延迟低，支持多种数据结构，适合高频读取的缓存场景，但也要考虑过期策略和持久化。\n\nFeedback: 你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。\n\nSuggested note",
+          "content": "Question: Redis 为什么适合做缓存？\n\nStudent answer: Redis 是内存数据库，延迟低，支持多种数据结构，适合高频读取的缓存场景，但也要考虑过期策略和持久化。\n\nFeedback: 你的回答覆盖了部分内容，但还需要补上核心定义、关键机制和更具体的应用说明。\n\nSuggested note: 回到核心概念，结合检索到的证据重写一版更完整的回答。",
+          "path": null
+        },
+        "next_plan": {
+          "summary": "你的回答得分为60，属于浅层回答，需要加深对Redis作为缓存优势的核心机制和应用场景的理解。当前掌握度为0.76，计划通过聚焦弱点、强化概念和练习来提升。",
+          "focus_areas": [
+            "Redis内存存储的优势（如高速访问、低延迟）",
+            "数据结构如何支持缓存场景（如字符串用于简单缓存、哈希用于对象存储）",
+            "缓存机制的细节（如过期策略、数据持久化选项）",
+            "典型应用的具体实现和益处（如计数器、排行榜）"
+          ],
+          "next_actions": [
+            "重新阅读并总结证据中关于Redis核心概念的部分，重点补充内存优势和缓存机制",
+            "撰写一份更完整的回答，解释Redis为什么适合做缓存，包括内存存储、数据结构和应用场景的详细说明",
+            "基于学习笔记，创建示例来演示Redis在缓存中的实际使用，如设置过期时间或处理高并发",
+            "尝试回答一个综合性问题，如‘比较Redis与其他缓存系统（如Memcached）的优缺点’"
+          ],
+          "recommended_question_types": [
+            "概念解释题（例如：为什么Redis的内存存储使其适合缓存？）",
+            "应用场景题（例如：描述Redis在会话存储中如何工作，并说明其优势）",
+            "分析比较题（例如：列出Redis数据结构在缓存中的使用场景，并解释选择原因）",
+            "实践设计题（例如：设计一个使用Redis缓存数据库查询结果的方案，包括过期策略）"
+          ]
+        },
+        "reference_answer": "Redis 基于内存访问，延迟低，支持多种数据结构，适合作为高频读场景下的缓存层，但需要关注持久化和缓存失效策略。",
+        "reference_rubric": [
+          "回答切题",
+          "概念准确",
+          "有场景或机制说明"
+        ],
+        "auto_context": {
+          "title": "Redis缓存适用性评估学习任务",
+          "current_topic": "Redis",
+          "learning_goal": "理解Redis为什么适合做缓存，包括其内存存储、数据结构和典型应用场景",
+          "current_task": "评估学习者回答在完整性、准确性和应用性方面",
+          "category_path": [
+            "技术",
+            "数据库",
+            "键值存储",
+            "Redis",
+            "缓存应用"
+          ]
+        },
+        "remediation_quiz": null,
+        "retry_count": 0,
+        "mastery_threshold": 0.6,
+        "error": "Structured output repair fallback used for GradingResult."
+      }
+    }
+  ]
+}
